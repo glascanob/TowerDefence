@@ -4,41 +4,46 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    protected Attacks attack = Attacks.sword;
-
-    protected void SetSpell()
+    public List<AttackBehaviour> attackList;
+    public AttackBehaviour curWeapon;
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        curWeapon = attackList[0];
+    }
+
+    public void SetSpell()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha0))
         {
-            Debug.Log("set to Spell 1!!!");
-            attack = (Attacks)1;
+            Debug.Log("0");
+            curWeapon = attackList[0];
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            Debug.Log("1");
+            curWeapon = attackList[1];
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            Debug.Log("set to Spell 2!!!");
-            attack = (Attacks)2;
+            Debug.Log("2");
+            curWeapon = attackList[2];
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            Debug.Log("set to Spell 3!!!");
-            attack = (Attacks)3;
+            Debug.Log("3");
+            curWeapon = attackList[3];
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            Debug.Log("set to Spell 3!!!");
-            attack = (Attacks)4;
+            Debug.Log("4");
+            curWeapon = attackList[4];
         }
     }
 
     public void SetSpell(int attacks)
     {
-        attack = (Attacks)attacks;
+        curWeapon = attackList[attacks];
     }
-}
-
-public enum Attacks
-{
-    sword, spell1, spell2, spell3, spell4
 }
 
 public enum AttackType
