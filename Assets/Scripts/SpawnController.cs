@@ -12,7 +12,7 @@ public class SpawnController : MonoBehaviour
     public int waveIntensity = 10;
     public float spawningSpeed = 0.5f;
 
-    int wave = 0;
+    public int wave = 0;
     public bool inWave = false;
     bool spawning = false;
 
@@ -22,7 +22,7 @@ public class SpawnController : MonoBehaviour
     void Start()
     {
         instance = this;
-        aliveEnemies = new Dictionary<int, GameObject>;
+        aliveEnemies = new Dictionary<int, GameObject>();
     }
 
     // Update is called once per frame
