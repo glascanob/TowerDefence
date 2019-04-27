@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpawnController : MonoBehaviour
 {
+    public static SpawnController instance;
+
     public List<GameObject> spawningPoints;
     public List<GameObject> listOfEnemies;
 
@@ -19,6 +21,7 @@ public class SpawnController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         aliveEnemies = new Dictionary<int, GameObject>;
     }
 

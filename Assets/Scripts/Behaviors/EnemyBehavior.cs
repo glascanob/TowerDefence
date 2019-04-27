@@ -8,6 +8,9 @@ public class EnemyBehavior : MonoBehaviour
     public int health;
     public int damage;
     public float speed;
+    public float distance;
+
+    bool isAlive = true;
 
     // Start is called before the first frame update
     void Start()
@@ -18,12 +21,18 @@ public class EnemyBehavior : MonoBehaviour
     // Update is called once per frame
     public virtual void Update()
     {
-        float step = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, TowerController.instance.target.position, step);
+        float distToTower = Vector3.Distance(transform.position, TowerController.instance.target.position);
+        if (isAlive && distToTower > distance)
+        {
+            float step = speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, TowerController.instance.target.position, step);
+        }
     }
 
     public void ReceiveDamage(int damage)
     {
+        isAlive = health - damage <= 0 ? false : true;
         health -= damage;
+        SpawnController.instance.KillEnemy(index);
     }
 }

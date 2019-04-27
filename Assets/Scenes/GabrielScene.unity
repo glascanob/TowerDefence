@@ -149,6 +149,7 @@ MonoBehaviour:
   - {fileID: 1715431059233405717, guid: 38a4fe383cca4431ba80084c398d1a68, type: 3}
   waveIntensity: 10
   spawningSpeed: 0.5
+  inWave: 0
   aliveEnemies: []
 --- !u!4 &270366523
 Transform:
