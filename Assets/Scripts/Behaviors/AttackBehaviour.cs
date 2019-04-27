@@ -9,4 +9,6 @@ public class AttackBehaviour : MonoBehaviour
     public int damage;
     public Animator anim;
     public float cooldownTime;
+    
+    public bool inCd = false;
 }

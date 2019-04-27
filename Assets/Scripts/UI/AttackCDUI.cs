@@ -8,7 +8,7 @@ public class AttackCDUI : MonoBehaviour
     public AttackBehaviour attackBehaviour;
 
     Image progressBar;
-    bool key;
+    bool key = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +26,7 @@ public class AttackCDUI : MonoBehaviour
             if (progressBar.fillAmount <= 0)
             {
                 Reset();
+                attackBehaviour.inCd = false;
             }
         }
     }
@@ -39,5 +40,10 @@ public class AttackCDUI : MonoBehaviour
     {
         progressBar.fillAmount = 1;
         key = false;
+    }
+
+    public bool InCD()
+    {
+        return key;
     }
 }

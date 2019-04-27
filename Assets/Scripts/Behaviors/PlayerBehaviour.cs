@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    public int damage;
+    int damage;
     public float moveSpeed;
     public Collider2D damageArea;
     public float cd = 0.5f;
+    
 
     [SerializeField] PlayerController pController;
-
-    bool inCd = false;
+    
     Rigidbody2D rb2D;
     bool enemyInRange = false;
 
-    AttackBehaviour curWeapon;
+    public AttackBehaviour curWeapon;
 
     // Use this for initialization
     void Start()
     {
+        curWeapon = pController.curWeapon;
         damageArea.enabled = false;
         rb2D = GetComponent<Rigidbody2D>();
     }
@@ -32,6 +33,19 @@ public class PlayerBehaviour : MonoBehaviour
         pController.SetSpell();
     }
 
+    private AttackBehaviour SearchList(AttackBehaviour attackBehaviour)
+    {
+        foreach(AttackBehaviour attBehaviour in pController.attackList)
+        {
+            if (attackBehaviour == attBehaviour)
+            {
+                return attBehaviour;
+            }
+        }
+
+        return null;
+    }
+
     private void PlayerMoving()
     {
         float hMovement = Input.GetAxis("Horizontal") * moveSpeed;
@@ -42,14 +56,17 @@ public class PlayerBehaviour : MonoBehaviour
     
     public void Attack()
     {
-        if (Input.GetMouseButtonDown(0) && !inCd) {
-            curWeapon = pController.curWeapon;
-
-            damage = curWeapon.damage;
-            cd = curWeapon.cooldownTime;
-
-            inCd = true;
-            StartCoroutine("AttackCo");
+        curWeapon = pController.curWeapon;
+        if (curWeapon != null)
+        {
+            if (Input.GetMouseButtonDown(0) && !SearchList(curWeapon).inCd)
+            {
+                Debug.Log(curWeapon);
+                cd = curWeapon.cooldownTime;
+                damage = curWeapon.damage;
+                SearchList(curWeapon).inCd = true;
+                StartCoroutine("AttackCo");
+            }
         }
     }
 
@@ -61,7 +78,6 @@ public class PlayerBehaviour : MonoBehaviour
 
         curWeapon.attackCDUI.Key();
         yield return new WaitForSeconds(cd);
-        inCd = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
