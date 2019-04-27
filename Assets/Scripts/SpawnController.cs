@@ -6,7 +6,8 @@ public class SpawnController : MonoBehaviour
 {
     public static SpawnController instance;
 
-    public List<GameObject> spawningPoints;
+    public Transform[] spawningPoints;
+    public GameObject spawningPointsParent;
     public List<GameObject> listOfEnemies;
 
     public int waveIntensity = 10;
@@ -23,6 +24,7 @@ public class SpawnController : MonoBehaviour
     {
         instance = this;
         aliveEnemies = new Dictionary<int, GameObject>();
+        spawningPoints = spawningPointsParent.GetComponentsInChildren<Transform>();
     }
 
     // Update is called once per frame
@@ -64,7 +66,7 @@ public class SpawnController : MonoBehaviour
     {
         for (int i = 0; i < wave + 1; i++)
         {
-            StartCoroutine(SpawnEnemiesCo(Random.Range(0, spawningPoints.Count)));
+            StartCoroutine(SpawnEnemiesCo(Random.Range(1, spawningPoints.Length)));
         }
         spawning = false;
     }
@@ -76,7 +78,7 @@ public class SpawnController : MonoBehaviour
         for(int i = 0; i < numberOfenemies; i++)
         {
             int typeofEnemy = Random.Range(0, wave < listOfEnemies.Count ? wave : listOfEnemies.Count);
-            GameObject newEnemy = Instantiate(listOfEnemies[typeofEnemy], spawningPoints[spawningPoint].transform.position, Quaternion.identity);
+            GameObject newEnemy = Instantiate(listOfEnemies[typeofEnemy], spawningPoints[spawningPoint].position, Quaternion.identity);
             newEnemy.GetComponentInChildren<EnemyBehavior>().index = enemyIndex;
             aliveEnemies.Add(enemyIndex, newEnemy);
             enemyIndex++;
@@ -93,6 +95,11 @@ public class SpawnController : MonoBehaviour
         GameObject enemyToKill;
         aliveEnemies.TryGetValue(index, out enemyToKill);
         aliveEnemies.Remove(index);
+        EnemyBehavior enemy = enemyToKill.GetComponentInChildren<EnemyBehavior>();
+        if(enemy.target != null)
+        {
+            enemy.target.RemoveEnemy();
+        }
         Destroy(enemyToKill);
     }
 }
