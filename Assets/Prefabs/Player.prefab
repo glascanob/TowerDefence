@@ -304,15 +304,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 4508922902026630622}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb153895284ad5b408f4b807c2cd3751, type: 3}
+  m_Script: {fileID: 11500000, guid: bf91b6e5c2af04500bfd815e778f86c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
-  moveSpeed: 5
+  damage: 0
+  moveSpeed: 4
   damageArea: {fileID: 1073906359964648469}
   cd: 0.5
-  playerController: {fileID: 0}
-  curWeapon: {fileID: 0}
+  pController: {fileID: 6688029272011844644}
 --- !u!50 &9008914241915255065
 Rigidbody2D:
   serializedVersion: 4
@@ -343,18 +342,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4508922902026630622}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cc4fe0e74281534298ce9e49eeb3b53, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b0d8c7a623644e8c801a67f2b0f0425, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
-  moveSpeed: 0
-  damageArea: {fileID: 1073906359964648469}
-  cd: 0.5
-  playerController: {fileID: 6688029272011844644}
+  attackList: []
   curWeapon: {fileID: 0}
-  attackList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}

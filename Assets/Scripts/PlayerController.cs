@@ -13,27 +13,27 @@ public class PlayerController : MonoBehaviour
 
     public void SetSpell()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha0))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             Debug.Log("0");
             curWeapon = attackList[0];
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha1))
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             Debug.Log("1");
             curWeapon = attackList[1];
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             Debug.Log("2");
             curWeapon = attackList[2];
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             Debug.Log("3");
             curWeapon = attackList[3];
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        else if (Input.GetKeyDown(KeyCode.Alpha5))
         {
             Debug.Log("4");
             curWeapon = attackList[4];
