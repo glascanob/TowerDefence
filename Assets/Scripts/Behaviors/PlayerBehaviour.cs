@@ -29,6 +29,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         PlayerMoving();
         Attack();
+        pController.SetSpell();
     }
 
     private void PlayerMoving()
