@@ -17,11 +17,16 @@ public class PlayerBehaviour : MonoBehaviour
 
     AttackBehaviour curWeapon;
 
+    Animator anim;
+    SpriteRenderer sprite;
+
     // Use this for initialization
     void Start()
     {
         damageArea.enabled = false;
         rb2D = GetComponent<Rigidbody2D>();
+        anim = GetComponentInChildren<Animator>();
+        sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -38,11 +43,24 @@ public class PlayerBehaviour : MonoBehaviour
         float vMovement = Input.GetAxis("Vertical") * moveSpeed;
 
         rb2D.velocity = new Vector2(hMovement, vMovement);
+
+
+        anim.SetFloat("XDirection", hMovement);
+        if(hMovement < 0)
+        {
+            sprite.flipX = true;
+        }
+        else
+        {
+            sprite.flipX = false;
+        }
+        anim.SetFloat("YDirection", vMovement);
+        anim.SetFloat("Velocity", rb2D.velocity.magnitude);
     }
     
     public void Attack()
     {
-        if (Input.GetMouseButtonDown(0) && !inCd) {
+        if (Input.GetMouseButtonDown(0)) {
             curWeapon = pController.curWeapon;
 
             damage = curWeapon.damage;
@@ -68,7 +86,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponentInParent<EnemyBehavior>().ReceiveDamage(damage);
+            collision.gameObject.GetComponentInParent<EnemyBehavior>().ReceiveDamage(damage, curWeapon.attackType);
         }
     }
 }

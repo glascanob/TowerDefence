@@ -19,7 +19,7 @@ public class EnemyBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -53,7 +53,7 @@ public class EnemyBehavior : MonoBehaviour
         }
     }
 
-    public void ReceiveDamage(int damage)
+    public virtual void ReceiveDamage(int damage, AttackTypes attackType)
     {
         if (health > 0)
         {

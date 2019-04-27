@@ -73,7 +73,7 @@ public class SpawnController : MonoBehaviour
 
     IEnumerator SpawnEnemiesCo(int spawningPoint)
     {
-        int numberOfenemies = Random.Range(wave + waveIntensity / 2, wave * waveIntensity);
+        int numberOfenemies = Random.Range(wave + waveIntensity / 2, wave * waveIntensity / 2);
 
         for(int i = 0; i < numberOfenemies; i++)
         {
