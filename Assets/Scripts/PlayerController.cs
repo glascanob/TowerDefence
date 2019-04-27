@@ -45,8 +45,3 @@ public class PlayerController : MonoBehaviour
         curWeapon = attackList[attacks];
     }
 }
-
-public enum AttackType
-{
-    heavy, normal, light, air
-}
