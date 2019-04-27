@@ -58,6 +58,10 @@ public class PlayerBehaviour : MonoBehaviour
         } else if (Input.GetKeyDown(KeyCode.Alpha3)) {
             Debug.Log("set to Spell 3!!!");
             spell = (Attacks) 3;
+        } else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            Debug.Log("set to Spell 3!!!");
+            spell = (Attacks) 4;
         }
     }
 
@@ -103,7 +107,7 @@ public class PlayerBehaviour : MonoBehaviour
 
 public enum Attacks
 {
-    sword, spell1, spell2, spell3, spell4, spell5
+    sword, spell1, spell2, spell3, spell4
 }
 
 public enum AttackType
