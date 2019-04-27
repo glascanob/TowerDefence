@@ -31,8 +31,12 @@ public class EnemyBehavior : MonoBehaviour
 
     public void ReceiveDamage(int damage)
     {
-        isAlive = health - damage <= 0 ? false : true;
-        health -= damage;
-        SpawnController.instance.KillEnemy(index);
+        if (health > 0)
+        {
+            isAlive = health - damage <= 0 ? false : true;
+            health -= damage;
+            if (!isAlive)
+                SpawnController.instance.KillEnemy(index);
+        }
     }
 }

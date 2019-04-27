@@ -17,7 +17,7 @@ public class SpawnController : MonoBehaviour
     bool spawning = false;
 
     public Dictionary<int,GameObject> aliveEnemies;
-    int enemyIndex = -1;
+    int enemyIndex = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -77,15 +77,22 @@ public class SpawnController : MonoBehaviour
         {
             int typeofEnemy = Random.Range(0, wave < listOfEnemies.Count ? wave : listOfEnemies.Count);
             GameObject newEnemy = Instantiate(listOfEnemies[typeofEnemy], spawningPoints[spawningPoint].transform.position, Quaternion.identity);
-            newEnemy.GetComponent<EnemyBehavior>().index = enemyIndex++;
+            newEnemy.GetComponentInChildren<EnemyBehavior>().index = enemyIndex;
             aliveEnemies.Add(enemyIndex, newEnemy);
+            enemyIndex++;
             yield return new WaitForSeconds(spawningSpeed);
         }
     }
 
     public void KillEnemy(int index)
     {
-        inWave = aliveEnemies.Count - 1 == 0 ? false : true;
+        if (aliveEnemies.Count - 1 <= 0)
+        {
+            inWave = false;
+        }
+        GameObject enemyToKill;
+        aliveEnemies.TryGetValue(index, out enemyToKill);
         aliveEnemies.Remove(index);
+        Destroy(enemyToKill);
     }
 }

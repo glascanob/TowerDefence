@@ -6,6 +6,10 @@ public class PlayerBehaviour : PlayerController
 {
     public int damage;
     public float moveSpeed;
+    public Collider2D damageArea;
+    public float cd = 0.5f;
+
+    bool inCd = false;
     //public GameObject weapon;
 
     Rigidbody2D rb2D;
@@ -14,6 +18,7 @@ public class PlayerBehaviour : PlayerController
     // Use this for initialization
     void Start()
     {
+        damageArea.enabled = false;
         rb2D = GetComponent<Rigidbody2D>();
         //weapon.SetActive(false); // temporary
     }
@@ -37,9 +42,10 @@ public class PlayerBehaviour : PlayerController
     GameObject enemy;
     public void Attack()
     {
-        if (Input.GetMouseButtonDown(0) && enemyInRange) {
+        if (Input.GetMouseButtonDown(0) && !inCd) {
             Debug.Log("attacking with " + attack.ToString());
-            enemy.GetComponent<EnemyBehavior>().ReceiveDamage(damage);
+            inCd = true;
+            StartCoroutine("AttackCo");
         }
         else
         {
@@ -47,17 +53,32 @@ public class PlayerBehaviour : PlayerController
         }
     }
 
+    IEnumerator AttackCo()
+    {
+        damageArea.enabled = true;
+        yield return new WaitForSeconds(0.2f);
+        damageArea.enabled = false;
+        yield return new WaitForSeconds(cd);
+        inCd = false;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Enemy is in Range!");
-        enemyInRange = true;
-        enemy = collision.gameObject;
+        if(collision.gameObject.CompareTag("Enemy"))
+        {
+            collision.gameObject.GetComponentInParent<EnemyBehavior>().ReceiveDamage(damage);
+        }
     }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    Debug.Log("Enemy is in Range!");
+    //    enemyInRange = true;
+    //    enemy = collision.gameObject;
+    //}
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        Debug.Log("Enemy is out of Range!");
-        enemyInRange = false;
-        enemy = null;
-    }
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    Debug.Log("Enemy is out of Range!");
+    //    enemyInRange = false;
+    //    enemy = null;
+    //}
 }
