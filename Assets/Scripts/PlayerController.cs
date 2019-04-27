@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public List<AttackBehaviour> attackList;
     public AttackBehaviour curWeapon;
-    private void Start()
+    private void Awake()
     {
         curWeapon = attackList[0];
     }
