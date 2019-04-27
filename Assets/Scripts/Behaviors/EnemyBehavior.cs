@@ -10,7 +10,11 @@ public class EnemyBehavior : MonoBehaviour
     public float speed;
     public float distance;
 
+    public SpotChecker target;
+
     bool isAlive = true;
+    protected bool inCD = false;
+    protected bool attacking = false;
 
     // Start is called before the first frame update
     void Start()
@@ -22,10 +26,30 @@ public class EnemyBehavior : MonoBehaviour
     public virtual void Update()
     {
         float distToTower = Vector3.Distance(transform.position, TowerController.instance.target.position);
-        if (isAlive && distToTower > distance)
+        if (isAlive)
         {
-            float step = speed * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, TowerController.instance.target.position, step);
+            if (distToTower > distance)
+            {
+                float step = speed * Time.deltaTime;
+                transform.position = Vector3.MoveTowards(transform.position, TowerController.instance.target.position, step);
+            }
+            else
+            {
+                if (target == null)
+                {
+                    target = TowerController.instance.GetSpot(gameObject);
+                }
+                float newDistance = Vector3.Distance(transform.position, target.position.transform.position);
+                if(newDistance > 0.1f)
+                {
+                    float step = speed * Time.deltaTime;
+                    transform.position = Vector3.MoveTowards(transform.position, target.position.transform.position, step);
+                }
+                else
+                {
+                    attacking = true;
+                }
+            }
         }
     }
 
@@ -38,5 +62,12 @@ public class EnemyBehavior : MonoBehaviour
             if (!isAlive)
                 SpawnController.instance.KillEnemy(index);
         }
+    }
+
+    protected IEnumerator Attack(float cd)
+    {
+        TowerController.instance.ReceiveDamage(damage);
+        yield return new WaitForSeconds(cd);
+        inCD = false;
     }
 }
