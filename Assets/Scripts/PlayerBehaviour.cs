@@ -8,17 +8,18 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] private int curHealth;
     public int damage;
     public float moveSpeed;
-    public GameObject weapon;
+    //public GameObject weapon;
 
     Rigidbody2D rb2D;
     Attacks spell = Attacks.sword;
+    bool enemyInRange = false;
 
     // Use this for initialization
     void Start()
     {
         curHealth = maxHealth;
         rb2D = GetComponent<Rigidbody2D>();
-        weapon.SetActive(false); // temporary
+        //weapon.SetActive(false); // temporary
     }
 
     // Update is called once per frame
@@ -46,7 +47,8 @@ public class PlayerBehaviour : MonoBehaviour
         rb2D.velocity = new Vector2(hMovement, vMovement);
     }
 
-    public void SetSpell() {
+    public void SetSpell()
+    {
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
             Debug.Log("set to Spell 1!!!");
             spell = (Attacks) 1;
@@ -59,33 +61,23 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
-    public void CastSpell()
+    public void SetSpell(int attacks)
     {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            Debug.Log("execute Spell " + spell + "!!!");
-        }
+        spell = (Attacks)attacks;
     }
 
+    GameObject enemy;
     public void Attack() {
-        if (Input.GetMouseButton(0)) {
+        if (Input.GetMouseButtonDown(0) && enemyInRange) {
             //Enable collider for weapon
-            if (spell == Attacks.sword)
-            {
-                weapon.SetActive(true); // temporary (after animations are set we can replace this)
-                //trigger some animation
-            }
-            else
-            {
-                Debug.Log("attacking with " + spell.ToString());
-            }
+            //weapon.SetActive(true); // temporary (after animations are set we can replace this)
+            //trigger some animation
+            Debug.Log("attacking with " + spell.ToString());
+            enemy.GetComponent<EnemyBehavior>().ReceiveDamage(damage);
         }
         else
         {
-            if (spell == Attacks.sword)
-            {
-                weapon.SetActive(false); // temporary (after animations are set we can replace this)
-            } 
+            //weapon.SetActive(false);
         }
     }
 
@@ -93,9 +85,28 @@ public class PlayerBehaviour : MonoBehaviour
     {
         curHealth -= damage;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Enemy is in Range!");
+        enemyInRange = true;
+        enemy = collision.gameObject;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        Debug.Log("Enemy is out of Range!");
+        enemyInRange = false;
+        enemy = null;
+    }
 }
 
 public enum Attacks
 {
     sword, spell1, spell2, spell3, spell4, spell5
+}
+
+public enum AttackType
+{
+    heavy, normal, light, air
 }
