@@ -21,4 +21,9 @@ public class EnemyBehavior : MonoBehaviour
         float step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, TowerController.instance.target.position, step);
     }
+
+    public void ReceiveDamage(int damage)
+    {
+        health -= damage;
+    }
 }
