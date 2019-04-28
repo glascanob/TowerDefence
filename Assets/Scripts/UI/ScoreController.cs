@@ -7,7 +7,8 @@ public class ScoreController : MonoBehaviour
 {
     public static ScoreController instance;
     public Text scoreText;
-    public int curScore = 0;
+
+    public SpawnController spawnController;
 
     // Start is called before the first frame update
     void Start()
@@ -28,14 +29,8 @@ public class ScoreController : MonoBehaviour
         UpdateScore();
     }
 
-    public void AddScore(int score)
-    {
-        curScore += score;
-        UpdateScore();
-    }
-
     public void UpdateScore()
     {
-        scoreText.text = curScore.ToString();
+        scoreText.text = spawnController.wave.ToString();
     }
 }

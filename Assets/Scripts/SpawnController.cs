@@ -102,9 +102,8 @@ public class SpawnController : MonoBehaviour
             newEnemy.GetComponentInChildren<EnemyBehavior>().index = enemyIndex;
             aliveEnemies.Add(enemyIndex, newEnemy);
             enemyIndex++;
-            yield return new WaitForSeconds(Random.Range(Mathf.Clamp(spawningSpeed - wave, 1.2f, 100f) , Mathf.Clamp(spawningSpeed * 2 - wave, 1.2f, 100f)));
+            yield return new WaitForSeconds(spawningSpeed);
         }
-        spawningActivePoints--;
     }
 
     public void KillEnemy(int index)

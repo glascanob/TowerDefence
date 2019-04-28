@@ -10,7 +10,6 @@ public class EnemyBehavior : MonoBehaviour
     public float speed;
     public float distance;
     public EnemyType enemyType;
-    public int scoreValue;
 
     public SpotChecker target;
 
