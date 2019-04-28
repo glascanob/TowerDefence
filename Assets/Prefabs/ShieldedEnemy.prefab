@@ -85,9 +85,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  health: 4
-  damage: 1
-  speed: 0.5
+  health: 8
+  damage: 3
+  speed: 0.2
   distance: 8
   enemyType: 0
   target: {fileID: 0}
@@ -265,7 +265,7 @@ Transform:
   m_GameObject: {fileID: 7034868645096384397}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25091562, y: 0.25091562, z: 0.25091562}
+  m_LocalScale: {x: 0.71723676, y: 0.71723676, z: 0.71723676}
   m_Children: []
   m_Father: {fileID: 7380427697853185673}
   m_RootOrder: 0
@@ -307,7 +307,7 @@ SpriteRenderer:
   m_SortingLayerID: 1455408999
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9eefa25dbf8bbf64db60cb6f7153bedd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6cb57c2925cd94ba9b19bb921cdecd2a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
