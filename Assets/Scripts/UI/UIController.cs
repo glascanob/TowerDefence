@@ -9,6 +9,8 @@ public class UIController : MonoBehaviour
 
     GameState previousState = GameState.start;
     public Text startText;
+
+    public GameObject StartCOntainer;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,7 @@ public class UIController : MonoBehaviour
 
         if(currentState != previousState)
         {
+            previousState = currentState;
             StateManager();
         }
     }

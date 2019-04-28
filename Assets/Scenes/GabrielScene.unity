@@ -702,9 +702,10 @@ MonoBehaviour:
   - {fileID: 1715431059233405717, guid: 38a4fe383cca4431ba80084c398d1a68, type: 3}
   - {fileID: 424610776379943358, guid: c2721fb2e97174152a1b9244bf9a024a, type: 3}
   - {fileID: 5427238113527161228, guid: 1f0966f0898e949dba4a486505aafa24, type: 3}
+  uiController: {fileID: 0}
   waveIntensity: 12
   wave: 1
-  inWave: 1
+  inWave: 0
 --- !u!4 &270366523
 Transform:
   m_ObjectHideFlags: 0
