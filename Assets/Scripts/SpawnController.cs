@@ -73,12 +73,15 @@ public class SpawnController : MonoBehaviour
 
     IEnumerator SpawnEnemiesCo(int spawningPoint)
     {
-        int numberOfenemies = Random.Range(wave + waveIntensity / 2, wave * waveIntensity / 2);
-
+        int numberOfenemies = Random.Range(wave + waveIntensity / 2, wave * waveIntensity / 3);
+        //numberOfenemies = 1;
         for(int i = 0; i < numberOfenemies; i++)
         {
             int typeofEnemy = Random.Range(0, wave < listOfEnemies.Count ? wave : listOfEnemies.Count);
+            //typeofEnemy = 2;
+            //spawningPoint = 6;
             GameObject newEnemy = Instantiate(listOfEnemies[typeofEnemy], spawningPoints[spawningPoint].position, Quaternion.identity);
+            newEnemy.GetComponentInChildren<SpriteRenderer>().flipX = spawningPoint % 2 == 0 ? true : false;
             newEnemy.GetComponentInChildren<EnemyBehavior>().index = enemyIndex;
             aliveEnemies.Add(enemyIndex, newEnemy);
             enemyIndex++;

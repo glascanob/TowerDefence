@@ -9,6 +9,7 @@ public class EnemyBehavior : MonoBehaviour
     public int damage;
     public float speed;
     public float distance;
+    public EnemyType enemyType;
 
     public SpotChecker target;
 
@@ -16,10 +17,15 @@ public class EnemyBehavior : MonoBehaviour
     protected bool inCD = false;
     protected bool attacking = false;
 
+    protected Animator anim;
+
+    SpriteRenderer sprite;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        anim = GetComponentInChildren<Animator>();
+        sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -37,7 +43,7 @@ public class EnemyBehavior : MonoBehaviour
             {
                 if (target == null)
                 {
-                    target = TowerController.instance.GetSpot(gameObject);
+                    target = TowerController.instance.GetSpot(gameObject, enemyType);
                 }
                 float newDistance = Vector3.Distance(transform.position, target.position.transform.position);
                 if(newDistance > 0.1f)
@@ -47,6 +53,14 @@ public class EnemyBehavior : MonoBehaviour
                 }
                 else
                 {
+                    if(target.spotId > 9)
+                    {
+                        sprite.flipX = true;
+                    }
+                    else
+                    {
+                        sprite.flipX = false;
+                    }
                     attacking = true;
                 }
             }
