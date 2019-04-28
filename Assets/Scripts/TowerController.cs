@@ -5,6 +5,7 @@ using UnityEngine;
 public class TowerController : MonoBehaviour
 {
     public static TowerController instance;
+    public SceneLoader sceneLoader;
 
     public int health;
     public GameObject spotParent;
@@ -107,5 +108,10 @@ public class TowerController : MonoBehaviour
             source.Play();
         }
         health -= damage;
+
+        if (health <= 0)
+        {
+            SceneLoader.instance.LoadNextScene();
+        }
     }
 }
