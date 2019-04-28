@@ -119,7 +119,6 @@ public class SpawnController : MonoBehaviour
             ScoreController.instance.score = wave;
             CameraController.instance.ToggleCamera(wave);
         }
-        totalEnemiesInWave--;
         GameObject enemyToKill;
         aliveEnemies.TryGetValue(index, out enemyToKill);
         aliveEnemies.Remove(index);
@@ -129,5 +128,6 @@ public class SpawnController : MonoBehaviour
             enemy.target.RemoveEnemy();
         }
         Destroy(enemyToKill);
+        totalEnemiesInWave--;
     }
 }
