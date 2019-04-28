@@ -117,6 +117,7 @@ public class SpawnController : MonoBehaviour
             UIController.currentState = GameState.shop;
             wave++;
             ScoreController.instance.score = wave;
+            CameraController.instance.ToggleCamera(wave);
         }
         totalEnemiesInWave--;
         GameObject enemyToKill;
