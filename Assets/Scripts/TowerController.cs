@@ -5,6 +5,7 @@ using UnityEngine;
 public class TowerController : MonoBehaviour
 {
     public static TowerController instance;
+    public SceneLoader sceneLoader;
 
     public GameObject spotParent;
     public GameObject farSpotParent;

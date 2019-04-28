@@ -68,11 +68,15 @@ MonoBehaviour:
   speed: 5
   distance: 6
   enemyType: 1
+  scoreValue: 5
   target: {fileID: 0}
   walkSound: {fileID: 8300000, guid: 9d3b54732436b8642b2b2cf0ec41f967, type: 3}
   deathSound: {fileID: 8300000, guid: d1e0d5572acb83047800e2cd269a53e0, type: 3}
   attackSound: {fileID: 8300000, guid: 5edefe17d9603d5409745aa69708b804, type: 3}
   source: {fileID: 9200075134786582097}
+  energyDrop: {fileID: 4139841866769911982, guid: 5c87932176be4fe439a7da0c6daaa2c2,
+    type: 3}
+  dropRate: 0.5
   cDBetweenAttacks: 3
   projectilPrefab: {fileID: 8456929370667164673, guid: cadea4e9801c64c75b10d639499d6629,
     type: 3}
