@@ -3,21 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[System.Serializable]
 public class HearthContainer : MonoBehaviour
 {
     public Image sprite;
-    public int state = 6;
+    public int state = 0;
     public Animator anim;
 
     public void Start()
     {
         sprite = GetComponent<Image>();
         anim = GetComponent<Animator>();
+        gameObject.SetActive(false);
     }
     public void GetHurt(int damage)
     {
+        Debug.Log("Damaged!!!" + damage);
         state -= damage;
-
+        Debug.Log("State!!!" + state);
         switch (state)
         {
             case 0:
@@ -38,7 +41,12 @@ public class HearthContainer : MonoBehaviour
                 anim.SetTrigger("Hurt");
                 break;
             case 5:
+                Debug.Log("called!!!!!");
                 anim.SetTrigger("Hurt");
+                break;
+            case 6:
+                sprite.sprite = TowerController.instance.healthController.hearthSprites[0];
+                gameObject.SetActive(true);
                 break;
         }
     }

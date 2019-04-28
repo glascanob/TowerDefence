@@ -107,7 +107,7 @@ public class EnemyBehavior : MonoBehaviour
             isAlive = health - damage <= 0 ? false : true;
             health -= damage;
             if (!isAlive) {
-                ScoreController.instance.AddScore(scoreValue);
+                //ScoreController.instance.AddScore(scoreValue);
                 SpawnController.instance.KillEnemy(index);
             }
         }

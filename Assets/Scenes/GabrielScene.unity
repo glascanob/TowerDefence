@@ -624,9 +624,8 @@ MonoBehaviour:
   - {fileID: 424610776379943358, guid: c2721fb2e97174152a1b9244bf9a024a, type: 3}
   - {fileID: 5427238113527161228, guid: 1f0966f0898e949dba4a486505aafa24, type: 3}
   waveIntensity: 12
-  spawningSpeed: 2
-  wave: 4
-  inWave: 0
+  wave: 1
+  inWave: 1
 --- !u!4 &270366523
 Transform:
   m_ObjectHideFlags: 0
@@ -970,8 +969,8 @@ GameObject:
   - component: {fileID: 542062942}
   - component: {fileID: 542062944}
   - component: {fileID: 542062943}
-  - component: {fileID: 542062946}
   - component: {fileID: 542062945}
+  - component: {fileID: 542062946}
   m_Layer: 5
   m_Name: Heart1 (3)
   m_TagString: Untagged
@@ -1067,7 +1066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  state: 6
+  state: 0
   anim: {fileID: 0}
 --- !u!1 &621363490
 GameObject:
@@ -1790,8 +1789,8 @@ GameObject:
   - component: {fileID: 903761972}
   - component: {fileID: 903761974}
   - component: {fileID: 903761973}
-  - component: {fileID: 903761976}
   - component: {fileID: 903761975}
+  - component: {fileID: 903761976}
   m_Layer: 5
   m_Name: Heart1 (1)
   m_TagString: Untagged
@@ -1887,7 +1886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  state: 6
+  state: 0
   anim: {fileID: 0}
 --- !u!1 &904140631
 GameObject:
@@ -2026,8 +2025,8 @@ GameObject:
   - component: {fileID: 993690129}
   - component: {fileID: 993690131}
   - component: {fileID: 993690130}
-  - component: {fileID: 993690133}
   - component: {fileID: 993690132}
+  - component: {fileID: 993690133}
   m_Layer: 5
   m_Name: Heart1 (4)
   m_TagString: Untagged
@@ -2123,7 +2122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  state: 6
+  state: 0
   anim: {fileID: 0}
 --- !u!1 &1030681654
 GameObject:
@@ -2953,8 +2952,8 @@ GameObject:
   - component: {fileID: 1360151449}
   - component: {fileID: 1360151451}
   - component: {fileID: 1360151450}
-  - component: {fileID: 1360151453}
   - component: {fileID: 1360151452}
+  - component: {fileID: 1360151453}
   m_Layer: 5
   m_Name: Heart1 (2)
   m_TagString: Untagged
@@ -3050,7 +3049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  state: 6
+  state: 0
   anim: {fileID: 0}
 --- !u!1 &1396585662
 GameObject:
@@ -4507,8 +4506,8 @@ GameObject:
   - component: {fileID: 1940100275}
   - component: {fileID: 1940100277}
   - component: {fileID: 1940100276}
-  - component: {fileID: 1940100279}
   - component: {fileID: 1940100278}
+  - component: {fileID: 1940100279}
   m_Layer: 5
   m_Name: Heart1
   m_TagString: Untagged
@@ -4604,7 +4603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  state: 6
+  state: 0
   anim: {fileID: 0}
 --- !u!1 &1976256091
 GameObject:
@@ -4967,6 +4966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 997742115fcda47d98da278ac5c926aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneLoader: {fileID: 0}
   spotParent: {fileID: 2001084111}
   farSpotParent: {fileID: 889371403}
   inerSpots: []
@@ -5034,6 +5034,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec0a5c67ff2f4c668008565030cb307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hearthContainers:
+  - {fileID: 1940100279}
+  - {fileID: 903761976}
+  - {fileID: 1360151453}
+  - {fileID: 542062946}
+  - {fileID: 993690133}
   hearthParent: {fileID: 1211845383}
   hearthSprites:
   - {fileID: 21300000, guid: f34323701ce37413aafd4eaba7136054, type: 3}

@@ -64,7 +64,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 0
   health: 2
-  damage: 4
+  damage: 1
   speed: 5
   distance: 6
   enemyType: 1

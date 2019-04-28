@@ -11,10 +11,12 @@ public class SpawnController : MonoBehaviour
     public List<GameObject> listOfEnemies;
 
     public int waveIntensity = 10;
-    public float spawningSpeed = 0.5f;
+    float spawningSpeed = 10f;
 
     public int wave = 0;
     public bool inWave = false;
+
+    int spawningActivePoints = 0;
     bool spawning = false;
 
     public Dictionary<int,GameObject> aliveEnemies;
@@ -60,19 +62,25 @@ public class SpawnController : MonoBehaviour
                 }
             }
         }
+        if(spawningActivePoints == 0)
+        {
+            spawning = false;
+        }
     }
 
     public void SpawnEnemies()
     {
+        spawningActivePoints = wave;
         for (int i = 0; i < wave + 1; i++)
         {
             StartCoroutine(SpawnEnemiesCo(Random.Range(1, spawningPoints.Length)));
         }
-        spawning = false;
+        //spawning = false;
     }
 
     IEnumerator SpawnEnemiesCo(int spawningPoint)
     {
+        yield return new WaitForSeconds(Random.Range(Mathf.Clamp(spawningSpeed - wave, 1.2f, 100f), Mathf.Clamp(spawningSpeed * 2 - wave, 1.2f, 100f)));
         int numberOfenemies = Random.Range(wave + waveIntensity / 2, wave * waveIntensity / 3);
         //numberOfenemies = 1;
         for(int i = 0; i < numberOfenemies; i++)
@@ -85,13 +93,14 @@ public class SpawnController : MonoBehaviour
             newEnemy.GetComponentInChildren<EnemyBehavior>().index = enemyIndex;
             aliveEnemies.Add(enemyIndex, newEnemy);
             enemyIndex++;
-            yield return new WaitForSeconds(spawningSpeed);
+            yield return new WaitForSeconds(Random.Range(Mathf.Clamp(spawningSpeed - wave, 1.2f, 100f) , Mathf.Clamp(spawningSpeed * 2 - wave, 1.2f, 100f)));
         }
+        spawningActivePoints--;
     }
 
     public void KillEnemy(int index)
     {
-        if (aliveEnemies.Count - 1 <= 0)
+        if (aliveEnemies.Count - 1 <= 0 && !spawning)
         {
             inWave = false;
         }
