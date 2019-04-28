@@ -10,6 +10,7 @@ public class EnemyBehavior : MonoBehaviour
     public float speed;
     public float distance;
     public EnemyType enemyType;
+    public int scoreValue;
 
     public SpotChecker target;
 
@@ -17,6 +18,9 @@ public class EnemyBehavior : MonoBehaviour
     public AudioClip deathSound;
     public AudioClip attackSound;
     public AudioSource source;
+
+    public GameObject energyDrop;
+    public float dropRate = 0.5f;
 
     bool isAlive = true;
     protected bool inCD = false;
@@ -95,10 +99,17 @@ public class EnemyBehavior : MonoBehaviour
         {
             AudioSource.PlayClipAtPoint(deathSound, transform.position);
 
+            if (Random.Range(0.0f, 1.0f) >= dropRate)
+            {
+                Instantiate(energyDrop, transform.position, Quaternion.identity);
+            }
+
             isAlive = health - damage <= 0 ? false : true;
             health -= damage;
-            if (!isAlive)
+            if (!isAlive) {
+                ScoreController.instance.AddScore(scoreValue);
                 SpawnController.instance.KillEnemy(index);
+            }
         }
     }
 

@@ -9,6 +9,10 @@ public class PlayerBehaviour : MonoBehaviour
     public Collider2D damageArea;
     public float cd = 0.5f;
 
+    public float energyBoostFactor = 5f;
+    public int energyBoostAmount;
+    public float energyTime = 1f;
+
     public AudioClip walkSound;
     public AudioClip attackSound;
     public AudioSource source;
@@ -40,6 +44,33 @@ public class PlayerBehaviour : MonoBehaviour
         PlayerMoving();
         Attack();
         pController.SetSpell();
+        EnergyBoost();
+    }
+
+    float timer = 0;
+    bool key = false;
+    private void EnergyBoost()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && energyBoostAmount > 0)
+        {
+            energyBoostAmount--;
+            moveSpeed += energyBoostFactor;
+            timer += energyTime;
+            key = true;
+        }
+        if (key)
+        {
+            if (timer > 0)
+            {
+                timer -= Time.deltaTime;
+            }
+            else if (timer <= 0)
+            {
+                moveSpeed -= energyBoostFactor;
+                key = false;
+            }
+        }
+        
     }
 
     private AttackBehaviour SearchList(AttackBehaviour attackBehaviour)
