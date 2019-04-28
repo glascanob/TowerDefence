@@ -90,7 +90,7 @@ Animator:
   m_GameObject: {fileID: 698774844197062374}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3ac146cefcec84b84aefe357848a6a73, type: 2}
+  m_Controller: {fileID: 9100000, guid: 054f6c2f6c717694a9395edb1e86df67, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -170,7 +170,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 2.3229015
 --- !u!114 &1185343119309903570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,20 +191,14 @@ MonoBehaviour:
   enemyType: 0
   target: {fileID: 0}
   walkSound:
-  - {fileID: 8300000, guid: 6d86271a92902944e9361b326c9c794a, type: 3}
-  - {fileID: 8300000, guid: e5255a8df6dce3b459a06acf352279ee, type: 3}
-  - {fileID: 8300000, guid: 3cc0beae071e1fb4b9727ccadf14c0f7, type: 3}
-  - {fileID: 8300000, guid: bc899b8ac81cd164599d0d0dbb37e4fe, type: 3}
+  - {fileID: 8300000, guid: 6c41bfe9174027c4585406e181b5a8c4, type: 3}
+  - {fileID: 8300000, guid: 6c15567146a7c6a408e04653a074a257, type: 3}
   attackSound:
-  - {fileID: 8300000, guid: 38b02c5fa3e0a5c4a81c7f97de4e7980, type: 3}
-  - {fileID: 8300000, guid: d93e7d1fc250bf54f96dbba1fe479ef1, type: 3}
-  - {fileID: 8300000, guid: 2153aeb954dd0b8449753c6ef2914262, type: 3}
-  - {fileID: 8300000, guid: 38e604cc82955e943b2831e9127fc046, type: 3}
-  - {fileID: 8300000, guid: 9cad1cc7e0266314f9f406dd0c2ce68b, type: 3}
-  - {fileID: 8300000, guid: e6a32051be3b4e04a84e40cc106dd0bc, type: 3}
-  - {fileID: 8300000, guid: 93eb824d2ee3eee4ca4d2ea14bfeb80f, type: 3}
-  - {fileID: 8300000, guid: f5b57b2fc5151ff4a9c77e1061de000a, type: 3}
-  deathSound: {fileID: 8300000, guid: 45d1cc0802e036b4baefc97e1ce2762d, type: 3}
+  - {fileID: 8300000, guid: e8941de59c3306e41918581f5c517268, type: 3}
+  - {fileID: 8300000, guid: fcdfb64602959ae4b9dbd1154ed1467d, type: 3}
+  - {fileID: 8300000, guid: e186317ae5782764fb4b86db1a276ecc, type: 3}
+  - {fileID: 8300000, guid: 64c6df8cc57beac449087f3e57581906, type: 3}
+  deathSound: {fileID: 8300000, guid: 1841d5a028782fa4284db064dd065176, type: 3}
   source: {fileID: 6805838377342132780}
   energyDrop: {fileID: 4139841866769911982, guid: 5c87932176be4fe439a7da0c6daaa2c2,
     type: 3}
