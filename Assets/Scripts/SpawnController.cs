@@ -127,7 +127,7 @@ public class SpawnController : MonoBehaviour
         {
             enemy.target.RemoveEnemy();
         }
-        Destroy(enemyToKill);
+        Destroy(enemyToKill, 0.1f);
         totalEnemiesInWave--;
     }
 }

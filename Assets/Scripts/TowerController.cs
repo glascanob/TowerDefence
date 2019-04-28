@@ -118,7 +118,7 @@ public class TowerController : MonoBehaviour
         inerSpots.Clear();
         foreach(SpotChecker sp in newList)
         {
-            Debug.Log("Im here");
+            //Debug.Log("Im here");
             inerSpots.Add(sp);
         }
         farSpots.Clear();

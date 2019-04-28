@@ -30,15 +30,11 @@ public class ExplosiveTNT : MonoBehaviour
             }
             else
             {
-                if (enemiesInRange != null)
-                {
-                    col.enabled = false;
-                    foreach (GameObject enemy in enemiesInRange)
+                foreach (GameObject enemy in enemiesInRange)
                     {
-                        enemy.GetComponent<EnemyBehavior>().ReceiveDamage(5, AttackTypes.spawn);
+                        Debug.Log("I will kil " + enemy);
+                        enemy.GetComponentInParent<EnemyBehavior>().ReceiveDamage(5, AttackTypes.spawn);
                     }
-                }
-                
                 Destroy(gameObject);
             }
         }
@@ -46,7 +42,7 @@ public class ExplosiveTNT : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!enemiesInRange.Contains(collision.gameObject) && !collision.CompareTag("Player"))
+        if (!enemiesInRange.Contains(collision.gameObject) && collision.CompareTag("Enemy"))
         {
             enemiesInRange.Add(collision.gameObject);
         }
@@ -55,7 +51,7 @@ public class ExplosiveTNT : MonoBehaviour
     
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (enemiesInRange.Contains(collision.gameObject))
+        if (enemiesInRange.Contains(collision.gameObject) && collision.CompareTag("Enemy"))
         {
             enemiesInRange.Remove(collision.gameObject);
         }

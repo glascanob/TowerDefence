@@ -18,9 +18,9 @@ public class HearthContainer : MonoBehaviour
     }
     public void GetHurt(int damage)
     {
-        Debug.Log("Damaged!!!" + damage);
+        //Debug.Log("Damaged!!!" + damage);
         state -= damage;
-        Debug.Log("State!!!" + state);
+        //Debug.Log("State!!!" + state);
         switch (state)
         {
             case 0:
@@ -41,7 +41,7 @@ public class HearthContainer : MonoBehaviour
                 anim.SetTrigger("Hurt");
                 break;
             case 5:
-                Debug.Log("called!!!!!");
+                //Debug.Log("called!!!!!");
                 anim.SetTrigger("Hurt");
                 break;
             case 6:

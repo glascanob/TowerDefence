@@ -146,7 +146,7 @@ public class PlayerBehaviour : MonoBehaviour
             if (Input.GetMouseButtonDown(0) && !SearchList(curWeapon).inCd)
             {
                 attacking = true;
-                Debug.Log(curWeapon);
+                //Debug.Log(curWeapon);
                 if (source.isPlaying)
                 {
                     source.clip = attackSound[Random.Range(0, attackSound.Count)];

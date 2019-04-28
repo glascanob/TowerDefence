@@ -38,7 +38,7 @@ public class ShopCOntroller : MonoBehaviour
                     TowerController.instance.UpdateShipSize(TowerController.ShipSize.small);
                     break;
                 case 3:
-                    boat.sprite = boats[1];
+                    boat.sprite = boats[0];
                     TowerController.instance.UpdateShipSize(TowerController.ShipSize.medium);
                     break;
                 case 4:

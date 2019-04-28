@@ -33,7 +33,7 @@ public class RangedEnemy : EnemyBehavior
 
     public override void ReceiveDamage(int damage, AttackTypes attackType)
     {
-        if (attackType == AttackTypes.air || attackType == AttackTypes.spawn)
+        if (attackType == AttackTypes.air)
             return;
         base.ReceiveDamage(damage, attackType);
     }
