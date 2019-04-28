@@ -6,7 +6,6 @@ public class PlayerBehaviour : MonoBehaviour
 {
     int damage;
     public float moveSpeed;
-    public Collider2D damageArea;
     public float cd = 0.5f;
 
     public float energyBoostFactor = 5f;
@@ -21,7 +20,8 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] PlayerController pController;
     
     Rigidbody2D rb2D;
-    bool enemyInRange = false;
+
+    bool attacking = false;
 
     public AttackBehaviour curWeapon;
 
@@ -32,7 +32,6 @@ public class PlayerBehaviour : MonoBehaviour
     void Start()
     {
         curWeapon = pController.curWeapon;
-        damageArea.enabled = false;
         rb2D = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();
@@ -85,11 +84,13 @@ public class PlayerBehaviour : MonoBehaviour
 
         return null;
     }
-
+    float previousHMovement = 0;
     private void PlayerMoving()
     {
-        float hMovement = Input.GetAxis("Horizontal") * moveSpeed;
-        float vMovement = Input.GetAxis("Vertical") * moveSpeed;
+        if (!attacking)
+        {
+            float hMovement = Input.GetAxis("Horizontal") * moveSpeed;
+            float vMovement = Input.GetAxis("Vertical") * moveSpeed;
 
         if (hMovement != 0 || vMovement != 0)
         {
@@ -100,17 +101,33 @@ public class PlayerBehaviour : MonoBehaviour
 
         rb2D.velocity = new Vector2(hMovement, vMovement);
 
-        anim.SetFloat("XDirection", hMovement);
-        if(hMovement < 0)
-        {
-            sprite.flipX = true;
+            anim.SetFloat("XDirection", hMovement);
+            if (hMovement < 0)
+            {
+                previousHMovement = hMovement;
+                //sprite.flipX = true;
+                transform.GetChild(0).localScale= new Vector3(-1, 1, 1);
+            }
+            else if(hMovement > 0)
+            {
+                previousHMovement = hMovement;
+                transform.GetChild(0).localScale= new Vector3(1, 1, 1);
+                //sprite.flipX = false;
+            }
+            else if(hMovement == 0)
+            {
+                if(previousHMovement < 0)
+                {
+                    transform.GetChild(0).localScale= new Vector3(-1, 1, 1);
+                }
+                else 
+                {
+                    transform.GetChild(0).localScale= new Vector3(1, 1, 1);
+                }
+            }
+            anim.SetFloat("YDirection", vMovement);
+            anim.SetFloat("Velocity", rb2D.velocity.magnitude);
         }
-        else
-        {
-            sprite.flipX = false;
-        }
-        anim.SetFloat("YDirection", vMovement);
-        anim.SetFloat("Velocity", rb2D.velocity.magnitude);
     }
     
     public void Attack()
@@ -120,6 +137,8 @@ public class PlayerBehaviour : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0) && !SearchList(curWeapon).inCd)
             {
+                attacking = true;
+                Debug.Log(curWeapon);
                 source.clip = attackSound;
                 source.Play();
                 cd = curWeapon.cooldownTime;
@@ -132,9 +151,10 @@ public class PlayerBehaviour : MonoBehaviour
 
     IEnumerator AttackCo()
     {
-        damageArea.enabled = true;
+        anim.SetInteger("AttackType", curWeapon.anim);
+        anim.SetTrigger("Attack");
         yield return new WaitForSeconds(0.2f);
-        damageArea.enabled = false;
+        attacking = false;
 
         curWeapon.attackCDUI.Key();
         yield return new WaitForSeconds(cd);
@@ -144,6 +164,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
+            Debug.Log(collision.gameObject.name);
             collision.gameObject.GetComponentInParent<EnemyBehavior>().ReceiveDamage(damage, curWeapon.attackType);
         }
     }

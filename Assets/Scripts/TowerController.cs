@@ -7,12 +7,13 @@ public class TowerController : MonoBehaviour
     public static TowerController instance;
     public SceneLoader sceneLoader;
 
-    public int health;
     public GameObject spotParent;
     public GameObject farSpotParent;
     [SerializeField]
     public List<SpotChecker> inerSpots;
     public List<SpotChecker> farSpots;
+
+    public HealthController healthController;
 
     public AudioClip damageSound;
     public AudioSource source; 
@@ -25,6 +26,7 @@ public class TowerController : MonoBehaviour
         instance = this;
         target = this.transform;
         int ind = 0;
+        healthController = GetComponent<HealthController>();
         SpotChecker[] temp = spotParent.GetComponentsInChildren<SpotChecker>();
         foreach(SpotChecker sp in temp)
         {
@@ -102,16 +104,6 @@ public class TowerController : MonoBehaviour
 
     public void ReceiveDamage(int damage)
     {
-        source.clip = damageSound;
-        if (!source.isPlaying)
-        {
-            source.Play();
-        }
-        health -= damage;
-
-        if (health <= 0)
-        {
-            SceneLoader.instance.LoadNextScene();
-        }
+        healthController.ReceiveDamage(damage);
     }
 }

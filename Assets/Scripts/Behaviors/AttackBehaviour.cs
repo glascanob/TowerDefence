@@ -8,7 +8,7 @@ public class AttackBehaviour : MonoBehaviour
 
     public AttackTypes attackType;
     public int damage;
-    public Animator anim;
+    public int anim;
     public float cooldownTime;
     
     public bool inCd = false;
