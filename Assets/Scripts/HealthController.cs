@@ -35,4 +35,10 @@ public class HealthController : MonoBehaviour
     {
         hearthContainers[currentHearts-1].GetHurt(damage);
     }
+    public void UpgradeShip()
+    {
+        hearthContainers[currentHearts - 1].GetHurt(hearthContainers[currentHearts - 1].state - 6);
+        currentHearts++;
+        hearthContainers[currentHearts - 1].GetHurt(-6);
+    }
 }

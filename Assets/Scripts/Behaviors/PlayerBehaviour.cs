@@ -41,7 +41,10 @@ public class PlayerBehaviour : MonoBehaviour
     void Update()
     {
         if (UIController.currentState == GameState.start || UIController.currentState == GameState.shop)
+        {
+            rb2D.velocity = new Vector2(0, 0);
             return;
+        }
         PlayerMoving();
         Attack();
         pController.SetSpell();

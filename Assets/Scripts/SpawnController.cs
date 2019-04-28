@@ -11,10 +11,12 @@ public class SpawnController : MonoBehaviour
     public List<GameObject> listOfEnemies;
 
     public int waveIntensity = 10;
-    float spawningSpeed = 10f;
+    public float spawningSpeed = 8f;
 
     public int wave = 0;
     public bool inWave = false;
+
+    public int totalEnemiesInWave = 0;
 
     int spawningActivePoints = 0;
     bool spawning = false;
@@ -35,7 +37,7 @@ public class SpawnController : MonoBehaviour
     {
         if (inWave)
         {
-            if (aliveEnemies.Count == 0)
+            if (totalEnemiesInWave == 0)
             {
                 if (!spawning)
                 {
@@ -78,17 +80,19 @@ public class SpawnController : MonoBehaviour
     public void SpawnEnemies()
     {
         spawningActivePoints = wave;
+
         for (int i = 0; i < wave + 1; i++)
         {
-            StartCoroutine(SpawnEnemiesCo(Random.Range(1, spawningPoints.Length)));
+            int numberOfenemies = Random.Range(wave + waveIntensity / 2, wave * waveIntensity / 3);
+            totalEnemiesInWave += numberOfenemies;
+            StartCoroutine(SpawnEnemiesCo(Random.Range(1, spawningPoints.Length),numberOfenemies));
         }
         //spawning = false;
     }
 
-    IEnumerator SpawnEnemiesCo(int spawningPoint)
+    IEnumerator SpawnEnemiesCo(int spawningPoint, int numberOfenemies)
     {
-        yield return new WaitForSeconds(Random.Range(Mathf.Clamp(spawningSpeed/2 - wave, 0.8f, 100f), Mathf.Clamp(spawningSpeed - wave, 0.8f, 100f)));
-        int numberOfenemies = Random.Range(wave + waveIntensity / 2, wave * waveIntensity / 3);
+        yield return new WaitForSeconds(Random.Range(Mathf.Clamp(spawningSpeed/4 - wave, 0.8f, 100f), Mathf.Clamp(spawningSpeed/2 - wave, 0.8f, 100f)));
         //numberOfenemies = 1;
         for(int i = 0; i < numberOfenemies; i++)
         {
@@ -107,13 +111,14 @@ public class SpawnController : MonoBehaviour
 
     public void KillEnemy(int index)
     {
-        if (aliveEnemies.Count - 1 <= 0 && !spawning)
+        if (totalEnemiesInWave - 1 <= 0 && !spawning)
         {
             inWave = false;
             UIController.currentState = GameState.shop;
             wave++;
             ScoreController.instance.score = wave;
         }
+        totalEnemiesInWave--;
         GameObject enemyToKill;
         aliveEnemies.TryGetValue(index, out enemyToKill);
         aliveEnemies.Remove(index);

@@ -9,6 +9,9 @@ public class UIController : MonoBehaviour
 
     GameState previousState = GameState.start;
     public Text startText;
+    public Text enemyCounter;
+
+    public GameObject upgradeShipButton;
 
     public GameObject startContainer;
     public GameObject shopContainer;
@@ -27,6 +30,7 @@ public class UIController : MonoBehaviour
             previousState = currentState;
             StateManager();
         }
+        enemyCounter.text = "Enemies remaining " + SpawnController.instance.totalEnemiesInWave;
     }
 
     public void StateManager()
@@ -43,6 +47,7 @@ public class UIController : MonoBehaviour
                 shopContainer.SetActive(false);
                 break;
             case GameState.shop:
+                upgradeShipButton.SetActive(true);
                 startContainer.SetActive(false);
                 shopContainer.SetActive(true);
                 break;
