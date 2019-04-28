@@ -20,7 +20,7 @@ public class WeakEnemy : EnemyBehavior
     }
     public override void ReceiveDamage(int damage, AttackTypes attackType)
     {
-        if (attackType == AttackTypes.air)
+        if (attackType == AttackTypes.air || attackType == AttackTypes.spawn)
             return;
         base.ReceiveDamage(damage, attackType);
     }

@@ -11,6 +11,8 @@ public class PlayerBehaviour : MonoBehaviour
     public float energyBoostFactor = 3f;
     public float energyTime = 1f;
 
+    public GameObject explosiveObj;
+
     public List<AudioClip> walkSound;
     public List<AudioClip> attackSound;
     public AudioSource source;
@@ -161,6 +163,10 @@ public class PlayerBehaviour : MonoBehaviour
 
     IEnumerator AttackCo()
     {
+        if (curWeapon.attackType == AttackTypes.spawn)
+        {
+            Instantiate(explosiveObj, transform.position, Quaternion.identity);
+        }
         anim.SetInteger("AttackType", curWeapon.anim);
         anim.SetTrigger("Attack");
         yield return new WaitForSeconds(0.2f);

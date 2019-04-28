@@ -21,7 +21,7 @@ public class ShieldedEnemy : EnemyBehavior
 
     public override void ReceiveDamage(int damage, AttackTypes attackType)
     {
-        if (attackType == AttackTypes.heavy)
+        if (attackType == AttackTypes.heavy || attackType == AttackTypes.spawn)
         {
             base.ReceiveDamage(damage, attackType);
         }
