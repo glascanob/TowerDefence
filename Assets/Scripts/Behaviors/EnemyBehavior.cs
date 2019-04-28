@@ -12,15 +12,14 @@ public class EnemyBehavior : MonoBehaviour
 
     public SpotChecker target;
 
+    public AudioClip walkSound;
+    public AudioClip deathSound;
+    public AudioClip attackSound;
+    public AudioSource source;
+
     bool isAlive = true;
     protected bool inCD = false;
     protected bool attacking = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     public virtual void Update()
@@ -50,6 +49,23 @@ public class EnemyBehavior : MonoBehaviour
                     attacking = true;
                 }
             }
+
+            if (!attacking)
+            {
+                source.clip = walkSound;
+                if (!source.isPlaying)
+                {
+                    source.Play();
+                }
+            }
+            else
+            {
+                source.clip = attackSound;
+                if (!source.isPlaying)
+                {
+                    source.Play();
+                }
+            }
         }
     }
 
@@ -57,6 +73,8 @@ public class EnemyBehavior : MonoBehaviour
     {
         if (health > 0)
         {
+            AudioSource.PlayClipAtPoint(deathSound, transform.position);
+
             isAlive = health - damage <= 0 ? false : true;
             health -= damage;
             if (!isAlive)

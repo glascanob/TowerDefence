@@ -8,6 +8,10 @@ public class PlayerBehaviour : MonoBehaviour
     public float moveSpeed;
     public Collider2D damageArea;
     public float cd = 0.5f;
+
+    public AudioClip walkSound;
+    public AudioClip attackSound;
+    public AudioSource source;
     
 
     [SerializeField] PlayerController pController;
@@ -56,6 +60,13 @@ public class PlayerBehaviour : MonoBehaviour
         float hMovement = Input.GetAxis("Horizontal") * moveSpeed;
         float vMovement = Input.GetAxis("Vertical") * moveSpeed;
 
+        if (hMovement != 0 || vMovement != 0)
+        {
+            source.clip = walkSound;
+            if(!source.isPlaying)
+                source.Play();
+        }
+
         rb2D.velocity = new Vector2(hMovement, vMovement);
 
 
@@ -79,7 +90,8 @@ public class PlayerBehaviour : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0) && !SearchList(curWeapon).inCd)
             {
-                Debug.Log(curWeapon);
+                source.clip = attackSound;
+                source.Play();
                 cd = curWeapon.cooldownTime;
                 damage = curWeapon.damage;
                 SearchList(curWeapon).inCd = true;
