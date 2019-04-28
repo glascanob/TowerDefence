@@ -90,9 +90,8 @@ MonoBehaviour:
   speed: 0.5
   distance: 2
   enemyType: 0
-  scoreValue: 10
   target: {fileID: 0}
-  walkSound: {fileID: 8300000, guid: d93e7d1fc250bf54f96dbba1fe479ef1, type: 3}
+  walkSound: {fileID: 8300000, guid: e5255a8df6dce3b459a06acf352279ee, type: 3}
   deathSound: {fileID: 8300000, guid: 45d1cc0802e036b4baefc97e1ce2762d, type: 3}
   attackSound: {fileID: 8300000, guid: 93eb824d2ee3eee4ca4d2ea14bfeb80f, type: 3}
   source: {fileID: 2093030037081196150}
