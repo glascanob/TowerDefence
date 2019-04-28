@@ -10,6 +10,8 @@ public class SpawnController : MonoBehaviour
     public GameObject spawningPointsParent;
     public List<GameObject> listOfEnemies;
 
+    public UIController uiController;
+
     public int waveIntensity = 10;
     float spawningSpeed = 10f;
 
@@ -24,6 +26,7 @@ public class SpawnController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        inWave = false;
         instance = this;
         aliveEnemies = new Dictionary<int, GameObject>();
         spawningPoints = spawningPointsParent.GetComponentsInChildren<Transform>();
@@ -66,6 +69,12 @@ public class SpawnController : MonoBehaviour
         {
             spawning = false;
         }
+    }
+
+    public void StartWave()
+    {
+        inWave = true;
+        uiController.currentState = GameState.inWave;
     }
 
     public void SpawnEnemies()
