@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: b35eaf5ef13b54912aea933bc0eccaf5
+guid: 0e1e4048518b547df9b641708f155eb2
 TextureImporter:
   fileIDToRecycleName:
-    21300000: ropeAttack_0
+    21300000: pirateSword_0
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -85,13 +85,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ropeAttack_0
+      name: pirateSword_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 41
-        width: 424
-        height: 998
+        x: 75
+        y: 0
+        width: 267
+        height: 823
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -99,7 +99,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9228064ee5e6c4bbab539aeea1e009e0
+      spriteID: 1b652c35e64b04627bab756cf91bdecb
       vertices: []
       indices: 
       edges: []
@@ -107,7 +107,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 7e35bf281fade4838a582d2063fd92c2
+    spriteID: 41ba9b83105504cc2b5dbb6a8b48e1b1
     vertices: []
     indices: 
     edges: []

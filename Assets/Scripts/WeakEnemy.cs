@@ -18,4 +18,10 @@ public class WeakEnemy : EnemyBehavior
             }
         }
     }
+    public override void ReceiveDamage(int damage, AttackTypes attackType)
+    {
+        if (attackType == AttackTypes.air)
+            return;
+        base.ReceiveDamage(damage, attackType);
+    }
 }

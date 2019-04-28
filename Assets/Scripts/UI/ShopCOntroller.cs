@@ -9,6 +9,11 @@ public class ShopCOntroller : MonoBehaviour
     public Image boat;
     public GameObject button;
     public GameObject closeShop;
+    public bool canBuy = false;
+
+    public PlayerBehaviour player;
+
+    public AttackBehaviour[] attackBehaviours;
 
     int previousHearths = 0;
     // Start is called before the first frame update
@@ -51,8 +56,58 @@ public class ShopCOntroller : MonoBehaviour
 
     public void UpgradeShip()
     {
-        button.SetActive(false);
+        if (!canBuy)
+            return;
+        canBuy = true;
         TowerController.instance.healthController.UpgradeShip();
+        closeShop.SetActive(true);
+    }
+    public void UpgradeLightAttack()
+    {
+        if (!canBuy)
+            return;
+        canBuy = true;
+        attackBehaviours[0].damage++;
+        closeShop.SetActive(true);
+    }
+    public void UpgradeHeavyAttack()
+    {
+        if (!canBuy)
+            return;
+        canBuy = true;
+        attackBehaviours[1].damage++;
+        closeShop.SetActive(true);
+    }
+    public void UpgradeAirAttack()
+    {
+        if (!canBuy)
+            return;
+        canBuy = true;
+        attackBehaviours[2].damage++;
+        closeShop.SetActive(true);
+    }
+    public void UpgradeRangedAttack()
+    {
+        if (!canBuy)
+            return;
+        canBuy = true;
+        attackBehaviours[3].damage++;
+        closeShop.SetActive(true);
+    }
+    public void UpgradeSpawnAttack()
+    {
+        if (!canBuy)
+            return;
+        canBuy = true;
+        attackBehaviours[4].damage++;
+        closeShop.SetActive(true);
+    }
+    public void UpgradeSpeed()
+    {
+        if (!canBuy)
+            return;
+        canBuy = true;
+        player.moveSpeed += 0.5f;
         closeShop.SetActive(true);
     }
     public void CloseShop()

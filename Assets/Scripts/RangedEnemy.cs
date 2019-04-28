@@ -33,9 +33,8 @@ public class RangedEnemy : EnemyBehavior
 
     public override void ReceiveDamage(int damage, AttackTypes attackType)
     {
-        if (attackType == AttackTypes.light)
-        {
-            base.ReceiveDamage(damage, attackType);
-        }
+        if (attackType == AttackTypes.air)
+            return;
+        base.ReceiveDamage(damage, attackType);
     }
 }

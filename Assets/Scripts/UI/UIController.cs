@@ -8,6 +8,8 @@ public class UIController : MonoBehaviour
     public static GameState currentState = GameState.start;
 
     GameState previousState = GameState.start;
+
+    public ShopCOntroller shopcontroller;
     public Text startText;
     public Text enemyCounter;
 
@@ -47,6 +49,7 @@ public class UIController : MonoBehaviour
                 shopContainer.SetActive(false);
                 break;
             case GameState.shop:
+                shopcontroller.canBuy = true;
                 upgradeShipButton.SetActive(true);
                 startContainer.SetActive(false);
                 shopContainer.SetActive(true);

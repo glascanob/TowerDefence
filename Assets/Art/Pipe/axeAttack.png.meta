@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: b35eaf5ef13b54912aea933bc0eccaf5
+guid: b5072aae3b7274055b84e01dfdc346bc
 TextureImporter:
   fileIDToRecycleName:
-    21300000: ropeAttack_0
+    21300000: axeAttack_0
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -85,11 +85,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ropeAttack_0
+      name: axeAttack_0
       rect:
         serializedVersion: 2
         x: 1
-        y: 41
+        y: 2
         width: 424
         height: 998
       alignment: 0
@@ -99,7 +99,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9228064ee5e6c4bbab539aeea1e009e0
+      spriteID: aa6cfcaa78a4c4bfdaac0d5ad57113ea
       vertices: []
       indices: 
       edges: []
@@ -107,7 +107,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 7e35bf281fade4838a582d2063fd92c2
+    spriteID: 793f3d72a2ef841db98f414917464865
     vertices: []
     indices: 
     edges: []
