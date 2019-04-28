@@ -8,8 +8,7 @@ public class PlayerBehaviour : MonoBehaviour
     public float moveSpeed;
     public float cd = 0.5f;
 
-    public float energyBoostFactor = 5f;
-    public int energyBoostAmount;
+    public float energyBoostFactor = 3f;
     public float energyTime = 1f;
 
     public AudioClip walkSound;
@@ -47,16 +46,9 @@ public class PlayerBehaviour : MonoBehaviour
     }
 
     float timer = 0;
-    bool key = false;
+    public bool key = false;
     private void EnergyBoost()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && energyBoostAmount > 0)
-        {
-            energyBoostAmount--;
-            moveSpeed += energyBoostFactor;
-            timer += energyTime;
-            key = true;
-        }
         if (key)
         {
             if (timer > 0)
@@ -70,6 +62,13 @@ public class PlayerBehaviour : MonoBehaviour
             }
         }
         
+    }
+
+    public void EnergySetup()
+    {
+        moveSpeed += energyBoostFactor;
+        timer += energyTime;
+        key = true;
     }
 
     private AttackBehaviour SearchList(AttackBehaviour attackBehaviour)

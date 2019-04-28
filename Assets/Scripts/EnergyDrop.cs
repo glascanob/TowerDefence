@@ -27,7 +27,7 @@ public class EnergyDrop : MonoBehaviour
     {
         if (collision.CompareTag("Player") && grabReady)
         {
-            collision.GetComponentInParent<PlayerBehaviour>().energyBoostAmount++;
+            collision.transform.parent.GetComponentInParent<PlayerBehaviour>().EnergySetup();
             Destroy(gameObject);
         } else if (collision.CompareTag("Player"))
         {

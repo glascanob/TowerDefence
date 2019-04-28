@@ -371,11 +371,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 4
   cd: 0.5
+  energyBoostFactor: 3
+  energyTime: 0.5
   walkSound: {fileID: 8300000, guid: 31ef6ab3ced50da4790dc8f8076d0988, type: 3}
   attackSound: {fileID: 8300000, guid: 9ef86b3e35bc61a4fa0bcd2df53fcf24, type: 3}
   source: {fileID: 3112504054972271548}
   pController: {fileID: 6688029272011844644}
   curWeapon: {fileID: 0}
+  key: 0
 --- !u!50 &9008914241915255065
 Rigidbody2D:
   serializedVersion: 4
