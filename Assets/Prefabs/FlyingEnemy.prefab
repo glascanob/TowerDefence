@@ -100,7 +100,7 @@ SpriteRenderer:
   m_SortingLayerID: 1455408999
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9eefa25dbf8bbf64db60cb6f7153bedd, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 1605d93051821ff4e9c195924c1ce213, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -121,7 +121,7 @@ Animator:
   m_GameObject: {fileID: 4595102666409198879}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3ac146cefcec84b84aefe357848a6a73, type: 2}
+  m_Controller: {fileID: 9100000, guid: 656194c4a7c8bc546b65e1470bd6568f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -317,10 +317,18 @@ MonoBehaviour:
   distance: 8
   enemyType: 0
   target: {fileID: 0}
-  walkSound: []
-  attackSound: []
-  deathSound: {fileID: 0}
-  source: {fileID: 0}
-  energyDrop: {fileID: 0}
+  walkSound:
+  - {fileID: 8300000, guid: 31396df46c1d4694cb1a27c254421154, type: 3}
+  - {fileID: 8300000, guid: 49fd5476a77bae84fa58d1654db7423c, type: 3}
+  - {fileID: 8300000, guid: 6337ec730e194bb4389800f5c34a0387, type: 3}
+  - {fileID: 8300000, guid: 2a875a1f08f5a0d4099e74513888c412, type: 3}
+  attackSound:
+  - {fileID: 8300000, guid: 4c043a0359723044fa2d7ecbb9eab718, type: 3}
+  - {fileID: 8300000, guid: 00e8990efd96aa04eac46b9ebc49612b, type: 3}
+  - {fileID: 8300000, guid: 22c975b259769cf4597b71a9b4b467ac, type: 3}
+  deathSound: {fileID: 8300000, guid: bff57b552fbb2f44d9c962a63723a77e, type: 3}
+  source: {fileID: 4809252238424643953}
+  energyDrop: {fileID: 4139841866769911982, guid: 5c87932176be4fe439a7da0c6daaa2c2,
+    type: 3}
   dropRate: 0.5
   cDBetweenAttacks: 2
