@@ -371,11 +371,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 4
   cd: 0.5
-  walkSound: {fileID: 8300000, guid: 31ef6ab3ced50da4790dc8f8076d0988, type: 3}
-  attackSound: {fileID: 8300000, guid: 9ef86b3e35bc61a4fa0bcd2df53fcf24, type: 3}
+  energyBoostFactor: 3
+  energyTime: 0.5
+  walkSound:
+  - {fileID: 8300000, guid: 31ef6ab3ced50da4790dc8f8076d0988, type: 3}
+  - {fileID: 8300000, guid: 93104122a92419143b0d27fa59991034, type: 3}
+  - {fileID: 8300000, guid: 8e470222a8be86242a347a7f1dcc3946, type: 3}
+  - {fileID: 8300000, guid: 546b83b2480760646866f4ec25e85c1b, type: 3}
+  - {fileID: 8300000, guid: 7eef4a7d497002c4cb9c7a151b619ef3, type: 3}
+  - {fileID: 8300000, guid: a0ec919453551404e8f3cb36b95474fa, type: 3}
+  - {fileID: 8300000, guid: 7d17f13bdd206e64280169afe4b0e1c4, type: 3}
+  - {fileID: 8300000, guid: 45f7813ae66987d4493bca85b8542c1b, type: 3}
+  - {fileID: 8300000, guid: 7a6c3c3463b733941995c5402f7d4e3b, type: 3}
+  - {fileID: 8300000, guid: 419fd058b69bb744f83f134d97b7c0ed, type: 3}
+  - {fileID: 8300000, guid: 1cc4722e4a83f7241804a4bcec45f720, type: 3}
+  - {fileID: 8300000, guid: 7b9050c25978bf745be559b9378a7e03, type: 3}
+  attackSound:
+  - {fileID: 8300000, guid: 4822099173e9e1a4183d75c05d0dfc78, type: 3}
+  - {fileID: 8300000, guid: 9ef86b3e35bc61a4fa0bcd2df53fcf24, type: 3}
   source: {fileID: 3112504054972271548}
   pController: {fileID: 6688029272011844644}
   curWeapon: {fileID: 0}
+  key: 0
 --- !u!50 &9008914241915255065
 Rigidbody2D:
   serializedVersion: 4
