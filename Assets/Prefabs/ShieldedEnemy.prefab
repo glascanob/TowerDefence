@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7380427697853185673}
   - component: {fileID: 3459339360449470975}
   - component: {fileID: 7723564149829074230}
-  - component: {fileID: 7995053401270249293}
   - component: {fileID: 1291040283}
   - component: {fileID: 2093030037081196150}
   m_Layer: 0
@@ -73,25 +72,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!95 &7995053401270249293
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1291040282}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2e8d616666868474ba143fcfa0a3a18d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1291040283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,6 +89,7 @@ MonoBehaviour:
   damage: 1
   speed: 0.5
   distance: 2
+  enemyType: 0
   target: {fileID: 0}
   walkSound: {fileID: 8300000, guid: d93e7d1fc250bf54f96dbba1fe479ef1, type: 3}
   deathSound: {fileID: 8300000, guid: 45d1cc0802e036b4baefc97e1ce2762d, type: 3}
@@ -235,8 +216,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 424610776379943358}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.11, y: 0, z: 0}
-  m_LocalScale: {x: 0.55208, y: 0.55208, z: 0.55208}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.45315, y: 0.45315, z: 0.45315}
   m_Children:
   - {fileID: 7380427697853185673}
   m_Father: {fileID: 0}
@@ -252,6 +233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7471077757195181461}
   - component: {fileID: 1822079087420269421}
+  - component: {fileID: 2014386734796909040}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -268,7 +250,7 @@ Transform:
   m_GameObject: {fileID: 7034868645096384397}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.35237, y: 0.35237, z: 0.35237}
+  m_LocalScale: {x: 0.25091562, y: 0.25091562, z: 0.25091562}
   m_Children: []
   m_Father: {fileID: 7380427697853185673}
   m_RootOrder: 0
@@ -308,7 +290,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1455408999
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3d9a37d2ca83a4320b68634ccef9c2a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -321,3 +303,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2014386734796909040
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7034868645096384397}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3ac146cefcec84b84aefe357848a6a73, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
