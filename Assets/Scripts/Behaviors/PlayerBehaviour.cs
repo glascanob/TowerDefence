@@ -7,6 +7,10 @@ public class PlayerBehaviour : MonoBehaviour
     int damage;
     public float moveSpeed;
     public float cd = 0.5f;
+
+    public AudioClip walkSound;
+    public AudioClip attackSound;
+    public AudioSource source;
     
 
     [SerializeField] PlayerController pController;
@@ -57,7 +61,14 @@ public class PlayerBehaviour : MonoBehaviour
             float hMovement = Input.GetAxis("Horizontal") * moveSpeed;
             float vMovement = Input.GetAxis("Vertical") * moveSpeed;
 
-            rb2D.velocity = new Vector2(hMovement, vMovement);
+        if (hMovement != 0 || vMovement != 0)
+        {
+            source.clip = walkSound;
+            if(!source.isPlaying)
+                source.Play();
+        }
+
+        rb2D.velocity = new Vector2(hMovement, vMovement);
 
             anim.SetFloat("XDirection", hMovement);
             if (hMovement < 0)
@@ -97,6 +108,8 @@ public class PlayerBehaviour : MonoBehaviour
             {
                 attacking = true;
                 Debug.Log(curWeapon);
+                source.clip = attackSound;
+                source.Play();
                 cd = curWeapon.cooldownTime;
                 damage = curWeapon.damage;
                 SearchList(curWeapon).inCd = true;

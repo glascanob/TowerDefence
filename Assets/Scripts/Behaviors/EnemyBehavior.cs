@@ -13,6 +13,11 @@ public class EnemyBehavior : MonoBehaviour
 
     public SpotChecker target;
 
+    public AudioClip walkSound;
+    public AudioClip deathSound;
+    public AudioClip attackSound;
+    public AudioSource source;
+
     bool isAlive = true;
     protected bool inCD = false;
     protected bool attacking = false;
@@ -46,14 +51,14 @@ public class EnemyBehavior : MonoBehaviour
                     target = TowerController.instance.GetSpot(gameObject, enemyType);
                 }
                 float newDistance = Vector3.Distance(transform.position, target.position.transform.position);
-                if(newDistance > 0.1f)
+                if (newDistance > 0.1f)
                 {
                     float step = speed * Time.deltaTime;
                     transform.position = Vector3.MoveTowards(transform.position, target.position.transform.position, step);
                 }
                 else
                 {
-                    if(target.spotId > 9)
+                    if (target.spotId > 9)
                     {
                         sprite.flipX = true;
                     }
@@ -64,6 +69,23 @@ public class EnemyBehavior : MonoBehaviour
                     attacking = true;
                 }
             }
+
+            if (!attacking)
+            {
+                source.clip = walkSound;
+                if (!source.isPlaying)
+                {
+                    source.Play();
+                }
+            }
+            else
+            {
+                source.clip = attackSound;
+                if (!source.isPlaying)
+                {
+                    source.Play();
+                }
+            }
         }
     }
 
@@ -71,6 +93,8 @@ public class EnemyBehavior : MonoBehaviour
     {
         if (health > 0)
         {
+            AudioSource.PlayClipAtPoint(deathSound, transform.position);
+
             isAlive = health - damage <= 0 ? false : true;
             health -= damage;
             if (!isAlive)

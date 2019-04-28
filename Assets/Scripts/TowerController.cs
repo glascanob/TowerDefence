@@ -14,6 +14,9 @@ public class TowerController : MonoBehaviour
 
     public HealthController healthController;
 
+    public AudioClip damageSound;
+    public AudioSource source; 
+
     [HideInInspector]
     public Transform target;
     // Start is called before the first frame update
