@@ -13098,6 +13098,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Weapons
       objectReference: {fileID: 0}
+    - target: {fileID: 6215275321007117497, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
+        type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215275321007117497, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
+        type: 3}
+      propertyPath: cooldownTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215275321007117497, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
+        type: 3}
+      propertyPath: attackCDUI
+      value: 
+      objectReference: {fileID: 716868647}
+    - target: {fileID: 6215275321007117497, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
+        type: 3}
+      propertyPath: anim
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215275319203381784, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
+        type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215275319203381784, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
+        type: 3}
+      propertyPath: cooldownTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215275319203381784, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
+        type: 3}
+      propertyPath: attackCDUI
+      value: 
+      objectReference: {fileID: 1794725661}
     - target: {fileID: 6215275320699032273, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13152,41 +13187,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6215275319203381784, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
-        type: 3}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6215275319203381784, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
-        type: 3}
-      propertyPath: cooldownTime
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6215275319203381784, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
-        type: 3}
-      propertyPath: attackCDUI
-      value: 
-      objectReference: {fileID: 1794725661}
-    - target: {fileID: 6215275321007117497, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
-        type: 3}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6215275321007117497, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
-        type: 3}
-      propertyPath: cooldownTime
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6215275321007117497, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
-        type: 3}
-      propertyPath: attackCDUI
-      value: 
-      objectReference: {fileID: 716868647}
-    - target: {fileID: 6215275321007117497, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
-        type: 3}
-      propertyPath: anim
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6215275319203381784, guid: db40b4ecbe22746b7b8857b3d0bdf89f, type: 3}
@@ -13262,6 +13262,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1818730145228837565, guid: e35bbf3c790f14dcd971ce169bd58bf1,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 6688029272011844644, guid: e35bbf3c790f14dcd971ce169bd58bf1,
         type: 3}
       propertyPath: attackList.Array.size
@@ -13292,11 +13297,6 @@ PrefabInstance:
       propertyPath: attackList.Array.data[4]
       value: 
       objectReference: {fileID: 330873684}
-    - target: {fileID: 1818730145228837565, guid: e35bbf3c790f14dcd971ce169bd58bf1,
-        type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 1944797018256420287, guid: e35bbf3c790f14dcd971ce169bd58bf1,
         type: 3}
       propertyPath: m_LocalPosition.x
