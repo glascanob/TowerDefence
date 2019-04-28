@@ -1,21 +1,25 @@
 fileFormatVersion: 2
-guid: 25a31c096b6e24e5aa34c130951a24eb
+guid: d83cc46eabdd48840bab0ab07c1a15fa
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Skeleton_Sheet_2_0
-    21300002: Skeleton_Sheet_2_1
-    21300004: Skeleton_Sheet_2_2
-    21300006: Skeleton_Sheet_2_3
-    21300008: Skeleton_Sheet_2_4
-    21300010: Skeleton_Sheet_2_5
-    21300012: Skeleton_Sheet_2_6
-    21300014: Skeleton_Sheet_2_7
-    21300016: Skeleton_Sheet_2_8
-    21300018: Skeleton_Sheet_2_9
-    21300020: Skeleton_Sheet_2_10
-    21300022: Skeleton_Sheet_2_11
-    21300024: Skeleton_Sheet_2_12
-    21300026: Skeleton_Sheet_2_13
+    21300000: sea_animals_1
+    21300002: sea_animals_2
+    21300004: sea_animals_3
+    21300006: sea_animals_4
+    21300008: sea_animals_5
+    21300010: sea_animals_6
+    21300012: sea_animals_7
+    21300014: sea_animals_8
+    21300016: sea_animals_9
+    21300018: sea_animals_10
+    21300020: sea_animals_11
+    21300022: sea_animals_12
+    21300024: sea_animals_13
+    21300026: sea_animals_14
+    21300028: sea_animals_15
+    21300030: sea_animals_16
+    21300032: sea_animals_17
+    21300034: sea_animals_18
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -45,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -98,13 +102,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Skeleton_Sheet_2_0
+      name: sea_animals_1
       rect:
         serializedVersion: 2
-        x: 140
-        y: 1591
-        width: 265
-        height: 421
+        x: 120
+        y: 743
+        width: 195
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,19 +116,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e5de8d75b73a4ebb8d00012c18631f6
+      spriteID: 01ead21f843a67f438cc7ec9c978fd28
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton_Sheet_2_1
+      name: sea_animals_2
       rect:
         serializedVersion: 2
-        x: 662
-        y: 1591
-        width: 264
-        height: 421
+        x: 446
+        y: 766
+        width: 167
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,19 +136,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6867dcb175da6470d9d34129449f287f
+      spriteID: 17e82304586a55a4bac1428678755918
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton_Sheet_2_2
+      name: sea_animals_3
       rect:
         serializedVersion: 2
-        x: 1168
-        y: 1588
-        width: 265
-        height: 424
+        x: 744
+        y: 819
+        width: 116
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,19 +156,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad5c6fff4a92a4af59c5f89d84a64d92
+      spriteID: 5a4d381de4fef5c41928b90a2fa1968f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton_Sheet_2_3
+      name: sea_animals_4
       rect:
         serializedVersion: 2
-        x: 1675
-        y: 1590
-        width: 265
-        height: 421
+        x: 1020
+        y: 833
+        width: 156
+        height: 137
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,19 +176,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8fabadff409844179325aec2c56e181
+      spriteID: ef42f612e2d8cd641bb4b0701dcd197e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton_Sheet_2_4
+      name: sea_animals_5
       rect:
         serializedVersion: 2
-        x: 142
-        y: 1062
-        width: 263
-        height: 424
+        x: 1348
+        y: 816
+        width: 164
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,19 +196,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65ef7ccdceda04c238e0fc097408a4e4
+      spriteID: f60d6421dad00ac4b9f07564177bd8db
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton_Sheet_2_5
+      name: sea_animals_6
       rect:
         serializedVersion: 2
-        x: 575
-        y: 1059
-        width: 257
-        height: 441
+        x: 1623
+        y: 736
+        width: 157
+        height: 234
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,19 +216,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 717d9c9916bad41538c87653b94d421e
+      spriteID: 003e9d947f3dd944cbe0154342b68b56
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton_Sheet_2_6
+      name: sea_animals_7
       rect:
         serializedVersion: 2
-        x: 1157
-        y: 1060
-        width: 213
-        height: 436
+        x: 130
+        y: 423
+        width: 196
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,19 +236,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0763a44178b9d4a849302e7631d9ffa5
+      spriteID: 6a78aa9042b7269488d4ce34c8d492e8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton_Sheet_2_7
+      name: sea_animals_8
       rect:
         serializedVersion: 2
-        x: 1680
-        y: 1060
-        width: 368
-        height: 425
+        x: 451
+        y: 423
+        width: 145
+        height: 119
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,19 +256,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 903813463f8ac4159bc68dd48f7ce504
+      spriteID: 05a73a7f02db6fe479dbd3273d1f8e51
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton_Sheet_2_8
+      name: sea_animals_9
       rect:
         serializedVersion: 2
-        x: 3
-        y: 579
-        width: 329
-        height: 441
+        x: 744
+        y: 474
+        width: 112
+        height: 147
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,19 +276,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53ae9f171553140529f9f24fc9853b82
+      spriteID: 7dd28ed0d4579e24084c0e5020b5505b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton_Sheet_2_9
+      name: sea_animals_10
       rect:
         serializedVersion: 2
-        x: 647
-        y: 599
-        width: 277
-        height: 418
+        x: 1058
+        y: 449
+        width: 153
+        height: 181
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,19 +296,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a614f2c2552ab4ed8aa252bb50310fdd
+      spriteID: ca735d3913e13ec4ba5d53431431ebd1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton_Sheet_2_10
+      name: sea_animals_11
       rect:
         serializedVersion: 2
-        x: 1176
-        y: 536
-        width: 360
-        height: 420
+        x: 1357
+        y: 469
+        width: 138
+        height: 134
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -312,19 +316,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d6dfc4b70bba46e584e9231540e379d
+      spriteID: f1ed69ca9d595384493856ea73cc6dea
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton_Sheet_2_11
+      name: sea_animals_12
       rect:
         serializedVersion: 2
-        x: 46
-        y: 7
-        width: 258
-        height: 433
+        x: 1696
+        y: 485
+        width: 76
+        height: 127
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -332,19 +336,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8221183a94e0b44ed8bdaf473a340dac
+      spriteID: 62d34c90fb0978742b98ebeca92b91fb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton_Sheet_2_12
+      name: sea_animals_13
       rect:
         serializedVersion: 2
-        x: 534
-        y: 20
-        width: 275
-        height: 492
+        x: 162
+        y: 212
+        width: 153
+        height: 126
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -352,19 +356,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23b346622fb40487dac2d17c9bf5caec
+      spriteID: f8d60b0d1ae2cb049965b527f2394b6a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton_Sheet_2_13
+      name: sea_animals_14
       rect:
         serializedVersion: 2
-        x: 1108
-        y: 7
-        width: 377
-        height: 433
+        x: 491
+        y: 176
+        width: 105
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -372,7 +376,87 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbfed917114ff459595560264f29c71d
+      spriteID: fcd5d9f164e038c4a8f4007827833960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_animals_15
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 134
+        width: 146
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef2020612ab23884795b2fa92c326fcf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_animals_16
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 139
+        width: 130
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc08dd77a62ac4f419e217dc8d410c9f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_animals_17
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 148
+        width: 136
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58763354ca1dde7489ab96c75e2b9dfb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_animals_18
+      rect:
+        serializedVersion: 2
+        x: 1703
+        y: 148
+        width: 139
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bfb0dbe23daa004c9d50204aa71b54f
       vertices: []
       indices: 
       edges: []
@@ -380,7 +464,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1f8b65b7e0cb447dd9d558c5f47e2464
+    spriteID: d800c14179ed6f54ab8fdfe2aa6422e6
     vertices: []
     indices: 
     edges: []
