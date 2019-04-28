@@ -1003,7 +1003,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -14.1, y: 4.300049}
+  m_AnchoredPosition: {x: -20.4, y: 12.3}
   m_SizeDelta: {x: 52.649994, y: 74}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &151881081
@@ -1039,7 +1039,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b35eaf5ef13b54912aea933bc0eccaf5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c3234cb1ae13d470fa2cd40e447b5c10, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4897,7 +4897,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -77, y: 4.5999756}
+  m_AnchoredPosition: {x: -88.3, y: 15.600006}
   m_SizeDelta: {x: 52.649994, y: 74}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &716868647
@@ -4933,7 +4933,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b5072aae3b7274055b84e01dfdc346bc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c9b7ec7a365964be18ea65721546586a, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -9086,7 +9086,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 47, y: 5.4000244}
+  m_AnchoredPosition: {x: 40.299995, y: 11.699997}
   m_SizeDelta: {x: 52.649994, y: 74}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1197005714
@@ -9122,7 +9122,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 75c926136e285477fb1e983a7df469b0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b2ee4431165884776bb7b01a6098401d, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -9551,7 +9551,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 107.4, y: 4.5999756}
+  m_AnchoredPosition: {x: 107.4, y: 10.5}
   m_SizeDelta: {x: 52.649994, y: 74}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1258797489
@@ -9587,7 +9587,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b15d4ae61410c48469e8359bf1484ce2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8dc6248228a2644adb77da79edc76697, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -13098,41 +13098,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Weapons
       objectReference: {fileID: 0}
-    - target: {fileID: 6215275321007117497, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
-        type: 3}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6215275321007117497, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
-        type: 3}
-      propertyPath: cooldownTime
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6215275321007117497, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
-        type: 3}
-      propertyPath: attackCDUI
-      value: 
-      objectReference: {fileID: 716868647}
-    - target: {fileID: 6215275321007117497, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
-        type: 3}
-      propertyPath: anim
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6215275319203381784, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
-        type: 3}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6215275319203381784, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
-        type: 3}
-      propertyPath: cooldownTime
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6215275319203381784, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
-        type: 3}
-      propertyPath: attackCDUI
-      value: 
-      objectReference: {fileID: 1794725661}
     - target: {fileID: 6215275320699032273, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13187,6 +13152,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215275319203381784, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
+        type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215275319203381784, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
+        type: 3}
+      propertyPath: cooldownTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215275319203381784, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
+        type: 3}
+      propertyPath: attackCDUI
+      value: 
+      objectReference: {fileID: 1794725661}
+    - target: {fileID: 6215275321007117497, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
+        type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215275321007117497, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
+        type: 3}
+      propertyPath: cooldownTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215275321007117497, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
+        type: 3}
+      propertyPath: attackCDUI
+      value: 
+      objectReference: {fileID: 716868647}
+    - target: {fileID: 6215275321007117497, guid: db40b4ecbe22746b7b8857b3d0bdf89f,
+        type: 3}
+      propertyPath: anim
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6215275319203381784, guid: db40b4ecbe22746b7b8857b3d0bdf89f, type: 3}
@@ -13262,11 +13262,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1818730145228837565, guid: e35bbf3c790f14dcd971ce169bd58bf1,
-        type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 6688029272011844644, guid: e35bbf3c790f14dcd971ce169bd58bf1,
         type: 3}
       propertyPath: attackList.Array.size
@@ -13297,6 +13292,11 @@ PrefabInstance:
       propertyPath: attackList.Array.data[4]
       value: 
       objectReference: {fileID: 330873684}
+    - target: {fileID: 1818730145228837565, guid: e35bbf3c790f14dcd971ce169bd58bf1,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 1944797018256420287, guid: e35bbf3c790f14dcd971ce169bd58bf1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14039,7 +14039,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b35eaf5ef13b54912aea933bc0eccaf5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b2d70ae7097724b83a85203a7b56961c, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -14072,7 +14072,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -134.2, y: 4.699951}
+  m_AnchoredPosition: {x: -147.2, y: 15.199997}
   m_SizeDelta: {x: 52.649994, y: 74}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &1796427485
