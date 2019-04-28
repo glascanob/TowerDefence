@@ -61,7 +61,7 @@ public class EnemyBehavior : MonoBehaviour
                 }
                 else
                 {
-                    if (target.spotId > 9)
+                    if (target.spotId > TowerController.instance.splitIn)
                     {
                         sprite.flipX = true;
                     }

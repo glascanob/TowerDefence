@@ -9,6 +9,8 @@ public class ShopCOntroller : MonoBehaviour
     public Image boat;
     public GameObject button;
     public GameObject closeShop;
+
+    int previousHearths = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,23 +20,32 @@ public class ShopCOntroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch(TowerController.instance.healthController.currentHearts)
+        if (previousHearths != TowerController.instance.healthController.currentHearts)
         {
-            case 1:
-                boat.sprite = boats[0];
-                break;
-            case 2:
-                boat.sprite = boats[0];
-                break;
-            case 3:
-                boat.sprite = boats[1];
-                break;
-            case 4:
-                boat.sprite = boats[1];
-                break;
-            case 5:
-                boat.sprite = boats[2];
-                break;
+            switch (TowerController.instance.healthController.currentHearts)
+            {
+                case 1:
+                    boat.sprite = boats[0];
+                    TowerController.instance.UpdateShipSize(TowerController.ShipSize.small);
+                    break;
+                case 2:
+                    boat.sprite = boats[0];
+                    TowerController.instance.UpdateShipSize(TowerController.ShipSize.small);
+                    break;
+                case 3:
+                    boat.sprite = boats[1];
+                    TowerController.instance.UpdateShipSize(TowerController.ShipSize.medium);
+                    break;
+                case 4:
+                    boat.sprite = boats[1];
+                    TowerController.instance.UpdateShipSize(TowerController.ShipSize.medium);
+                    break;
+                case 5:
+                    boat.sprite = boats[2];
+                    TowerController.instance.UpdateShipSize(TowerController.ShipSize.big);
+                    break;
+            }
+            previousHearths = TowerController.instance.healthController.currentHearts;
         }
     }
 
