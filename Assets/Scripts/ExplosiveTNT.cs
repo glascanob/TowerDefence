@@ -6,6 +6,8 @@ public class ExplosiveTNT : MonoBehaviour
 {
     public float timer = 3f;
 
+    Animator anim;
+
     [SerializeField]
     List<GameObject> enemiesInRange;
     bool key = false;
@@ -17,6 +19,8 @@ public class ExplosiveTNT : MonoBehaviour
         col = GetComponent<CircleCollider2D>();
         enemiesInRange = new List<GameObject>();
         key = true;
+
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -35,7 +39,8 @@ public class ExplosiveTNT : MonoBehaviour
                         Debug.Log("I will kil " + enemy);
                         enemy.GetComponentInParent<EnemyBehavior>().ReceiveDamage(5, AttackTypes.spawn);
                     }
-                Destroy(gameObject);
+                anim.SetBool("Explode", true);
+                Destroy(gameObject, 0.5f);
             }
         }
     }
