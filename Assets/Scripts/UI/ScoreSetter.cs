@@ -14,6 +14,6 @@ public class ScoreSetter : MonoBehaviour
     {
         sController = FindObjectOfType<ScoreController>();
         sController.scoreText = scoreText;
-        sController.UpdateScore();
+        //sController.UpdateScore();
     }
 }

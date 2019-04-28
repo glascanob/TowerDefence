@@ -8,29 +8,21 @@ public class ScoreController : MonoBehaviour
     public static ScoreController instance;
     public Text scoreText;
 
-    public SpawnController spawnController;
+    public int score;
 
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
 
-        int scoreControllerCount = FindObjectsOfType<ScoreController>().Length;
-        if (scoreControllerCount > 1)
-        {
-            gameObject.SetActive(false);
-            Destroy(gameObject);
-        }
-        else
-        {
             DontDestroyOnLoad(gameObject);
-        }
 
-        UpdateScore();
+        //UpdateScore();
     }
 
-    public void UpdateScore()
+    public void UpdateScore(int wave)
     {
-        scoreText.text = spawnController.wave.ToString();
+        //scoreText.text = spawnController.wave.ToString();
+        score = wave;
     }
 }

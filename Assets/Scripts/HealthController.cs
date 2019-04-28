@@ -25,7 +25,10 @@ public class HealthController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(currentHearts <= 0)
+        {
+            UIController.currentState = GameState.gameover;
+        }
     }
 
     public void ReceiveDamage(int damage)

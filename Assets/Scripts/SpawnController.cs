@@ -10,8 +10,6 @@ public class SpawnController : MonoBehaviour
     public GameObject spawningPointsParent;
     public List<GameObject> listOfEnemies;
 
-    public UIController uiController;
-
     public int waveIntensity = 10;
     float spawningSpeed = 10f;
 
@@ -74,7 +72,7 @@ public class SpawnController : MonoBehaviour
     public void StartWave()
     {
         inWave = true;
-        uiController.currentState = GameState.inWave;
+        UIController.currentState = GameState.inWave;
     }
 
     public void SpawnEnemies()
@@ -89,11 +87,12 @@ public class SpawnController : MonoBehaviour
 
     IEnumerator SpawnEnemiesCo(int spawningPoint)
     {
-        yield return new WaitForSeconds(Random.Range(Mathf.Clamp(spawningSpeed - wave, 1.2f, 100f), Mathf.Clamp(spawningSpeed * 2 - wave, 1.2f, 100f)));
+        yield return new WaitForSeconds(Random.Range(Mathf.Clamp(spawningSpeed/2 - wave, 0.8f, 100f), Mathf.Clamp(spawningSpeed - wave, 0.8f, 100f)));
         int numberOfenemies = Random.Range(wave + waveIntensity / 2, wave * waveIntensity / 3);
         //numberOfenemies = 1;
         for(int i = 0; i < numberOfenemies; i++)
         {
+            yield return new WaitForSeconds(Random.Range(Mathf.Clamp(spawningSpeed - wave, 0.8f, 100f), Mathf.Clamp(spawningSpeed * 2 - wave, 0.8f, 100f)));
             int typeofEnemy = Random.Range(0, wave < listOfEnemies.Count ? wave : listOfEnemies.Count);
             //typeofEnemy = 2;
             //spawningPoint = 6;
@@ -102,8 +101,8 @@ public class SpawnController : MonoBehaviour
             newEnemy.GetComponentInChildren<EnemyBehavior>().index = enemyIndex;
             aliveEnemies.Add(enemyIndex, newEnemy);
             enemyIndex++;
-            yield return new WaitForSeconds(spawningSpeed);
         }
+        spawningActivePoints--;
     }
 
     public void KillEnemy(int index)
@@ -111,6 +110,9 @@ public class SpawnController : MonoBehaviour
         if (aliveEnemies.Count - 1 <= 0 && !spawning)
         {
             inWave = false;
+            UIController.currentState = GameState.shop;
+            wave++;
+            ScoreController.instance.score = wave;
         }
         GameObject enemyToKill;
         aliveEnemies.TryGetValue(index, out enemyToKill);

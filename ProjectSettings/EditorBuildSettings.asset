@@ -9,9 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Start_Scene.unity
     guid: 3539244664fee48a7afb2f3251505032
   - enabled: 1
-    path: Assets/Scenes/Lander.unity
-    guid: dbee08e4390874f309ffa3d8fefc22c6
+    path: Assets/Scenes/GabrielScene.unity
+    guid: e603b957b3f294f96817fa630b728287
   - enabled: 1
-    path: Assets/Scenes/GameOver_Scene.unity
+    path: Assets/Scenes/GameOver.unity
     guid: caa35bbfa3a334dc4aa47e610a720b4e
   m_configObjects: {}
