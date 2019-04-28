@@ -13,6 +13,9 @@ public class TowerController : MonoBehaviour
     public List<SpotChecker> inerSpots;
     public List<SpotChecker> farSpots;
 
+    public AudioClip damageSound;
+    public AudioSource source; 
+
     [HideInInspector]
     public Transform target;
     // Start is called before the first frame update
@@ -98,6 +101,11 @@ public class TowerController : MonoBehaviour
 
     public void ReceiveDamage(int damage)
     {
+        source.clip = damageSound;
+        if (!source.isPlaying)
+        {
+            source.Play();
+        }
         health -= damage;
     }
 }

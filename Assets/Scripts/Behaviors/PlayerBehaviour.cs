@@ -69,7 +69,6 @@ public class PlayerBehaviour : MonoBehaviour
 
         rb2D.velocity = new Vector2(hMovement, vMovement);
 
-
         anim.SetFloat("XDirection", hMovement);
         if(hMovement < 0)
         {

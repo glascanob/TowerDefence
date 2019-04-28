@@ -51,14 +51,14 @@ public class EnemyBehavior : MonoBehaviour
                     target = TowerController.instance.GetSpot(gameObject, enemyType);
                 }
                 float newDistance = Vector3.Distance(transform.position, target.position.transform.position);
-                if(newDistance > 0.1f)
+                if (newDistance > 0.1f)
                 {
                     float step = speed * Time.deltaTime;
                     transform.position = Vector3.MoveTowards(transform.position, target.position.transform.position, step);
                 }
                 else
                 {
-                    if(target.spotId > 9)
+                    if (target.spotId > 9)
                     {
                         sprite.flipX = true;
                     }
@@ -67,6 +67,23 @@ public class EnemyBehavior : MonoBehaviour
                         sprite.flipX = false;
                     }
                     attacking = true;
+                }
+            }
+
+            if (!attacking)
+            {
+                source.clip = walkSound;
+                if (!source.isPlaying)
+                {
+                    source.Play();
+                }
+            }
+            else
+            {
+                source.clip = attackSound;
+                if (!source.isPlaying)
+                {
+                    source.Play();
                 }
             }
         }

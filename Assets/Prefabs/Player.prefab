@@ -339,7 +339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
-  damageArea: {fileID: 0}
+  damageArea: {fileID: 4920425389749492741}
   cd: 0.5
   walkSound: {fileID: 8300000, guid: 31ef6ab3ced50da4790dc8f8076d0988, type: 3}
   attackSound: {fileID: 8300000, guid: 9ef86b3e35bc61a4fa0bcd2df53fcf24, type: 3}
