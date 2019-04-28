@@ -186,7 +186,7 @@ MonoBehaviour:
   index: 0
   health: 8
   damage: 4
-  speed: 0.2
+  speed: 0.1
   distance: 8
   enemyType: 0
   target: {fileID: 0}

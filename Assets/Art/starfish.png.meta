@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: 4bb2aad8c477845d49182f77fff0daef
+guid: 7e2e7b1600bdd624b9aec0d7a84805ae
 TextureImporter:
   fileIDToRecycleName:
-    21300000: rock_medium_1
+    21300000: starfish_1
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -85,13 +85,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rock_medium_1
+      name: starfish_1
       rect:
         serializedVersion: 2
-        x: 104
-        y: 188
-        width: 310
-        height: 136
+        x: 157
+        y: 181
+        width: 171
+        height: 151
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -99,7 +99,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31d75af1a67351544a460cf28d8ae8d3
+      spriteID: 88cc77bbb1bc4bc47807cc86b5c6a3a2
       vertices: []
       indices: 
       edges: []
@@ -107,7 +107,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 4747d0854d70f3b44ba3bf970b1cf52a
+    spriteID: 46a521a2b4b574148978d83c3e62007a
     vertices: []
     indices: 
     edges: []

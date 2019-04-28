@@ -1,15 +1,9 @@
 fileFormatVersion: 2
-guid: 8e895697bcda04daea42aeef846d4501
+guid: 5452f1c50ddb029489495c04820700a0
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Dingy_midSized_0
-    21300002: Dingy_midSized_1
-    21300004: Dingy_midSized_2
-    21300006: Dingy_midSized_3
-    21300008: Dingy_midSized_4
-    21300010: Dingy_midSized_5
-    21300012: Dingy_midSized_6
-    21300014: Dingy_midSized_7
+    21300000: Dingy_midSized_1
+    21300002: Dingy_midSized_2
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -39,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -92,33 +86,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dingy_midSized_0
-      rect:
-        serializedVersion: 2
-        x: 1273
-        y: 1388
-        width: 569
-        height: 394
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e14bfb76ad0244e9a84316899bf535b5
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Dingy_midSized_1
       rect:
         serializedVersion: 2
-        x: 1820
-        y: 1429
-        width: 23
-        height: 15
+        x: 1273
+        y: 1336
+        width: 585
+        height: 446
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,7 +100,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f9e8e96fbef244ee9c7fb7208160bff
+      spriteID: 114bd8d281ab28842a0d05351f3b9b6e
       vertices: []
       indices: 
       edges: []
@@ -135,110 +109,10 @@ TextureImporter:
       name: Dingy_midSized_2
       rect:
         serializedVersion: 2
-        x: 1849
-        y: 1390
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c93d98c305c1b483ba9d3341e23b899e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dingy_midSized_3
-      rect:
-        serializedVersion: 2
-        x: 1709
-        y: 1343
-        width: 42
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2ea75a633927e444aa4e6329454f46ef
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dingy_midSized_4
-      rect:
-        serializedVersion: 2
-        x: 1771
-        y: 1353
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31701d69bd7d645bc93e7edc3253085c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dingy_midSized_5
-      rect:
-        serializedVersion: 2
-        x: 1821
-        y: 1336
-        width: 24
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 65df9dfd73a6540c5b0f6dbb253944f0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dingy_midSized_6
-      rect:
-        serializedVersion: 2
         x: 168
-        y: 207
-        width: 833
-        height: 797
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c70f8b4ce944a4d12aeeba6bfafef0bf
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dingy_midSized_7
-      rect:
-        serializedVersion: 2
-        x: 600
         y: 195
-        width: 21
-        height: 11
+        width: 833
+        height: 809
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,7 +120,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f44e7885f0944546b08fedd54e65a56
+      spriteID: d8e3ee44a2788f0439090aa659febf45
       vertices: []
       indices: 
       edges: []
@@ -254,7 +128,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6141a7a2b414b40b99fa26923e3e0f50
+    spriteID: b46a42dda3179014e8b2f5fe9d0b69f0
     vertices: []
     indices: 
     edges: []
