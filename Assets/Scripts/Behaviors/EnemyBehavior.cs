@@ -10,7 +10,6 @@ public class EnemyBehavior : MonoBehaviour
     public float speed;
     public float distance;
     public EnemyType enemyType;
-    public int scoreValue;
 
     public SpotChecker target;
 
@@ -107,7 +106,6 @@ public class EnemyBehavior : MonoBehaviour
             isAlive = health - damage <= 0 ? false : true;
             health -= damage;
             if (!isAlive) {
-                ScoreController.instance.AddScore(scoreValue);
                 SpawnController.instance.KillEnemy(index);
             }
         }

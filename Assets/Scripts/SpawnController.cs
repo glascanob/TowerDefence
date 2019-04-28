@@ -87,6 +87,8 @@ public class SpawnController : MonoBehaviour
             enemyIndex++;
             yield return new WaitForSeconds(spawningSpeed);
         }
+
+        ScoreController.instance.UpdateScore();
     }
 
     public void KillEnemy(int index)
