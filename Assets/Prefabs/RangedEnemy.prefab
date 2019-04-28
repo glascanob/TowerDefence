@@ -68,11 +68,14 @@ MonoBehaviour:
   speed: 5
   distance: 6
   enemyType: 1
-  scoreValue: 5
   target: {fileID: 0}
-  walkSound: {fileID: 8300000, guid: 9d3b54732436b8642b2b2cf0ec41f967, type: 3}
-  deathSound: {fileID: 8300000, guid: d1e0d5572acb83047800e2cd269a53e0, type: 3}
-  attackSound: {fileID: 8300000, guid: 5edefe17d9603d5409745aa69708b804, type: 3}
+  walkSound:
+  - {fileID: 8300000, guid: 88ac86b8bf9e2f24a8107e4f1c770518, type: 3}
+  - {fileID: 8300000, guid: e21afd36b75611f49816b7f51bcedf22, type: 3}
+  - {fileID: 8300000, guid: 91fbc3ddc7755ec47a7de6aaa1fa00f7, type: 3}
+  attackSound:
+  - {fileID: 8300000, guid: 5edefe17d9603d5409745aa69708b804, type: 3}
+  deathSound: {fileID: 8300000, guid: 9387ad5898dc50a40acdb824714d2808, type: 3}
   source: {fileID: 9200075134786582097}
   energyDrop: {fileID: 4139841866769911982, guid: 5c87932176be4fe439a7da0c6daaa2c2,
     type: 3}

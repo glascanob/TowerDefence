@@ -91,9 +91,21 @@ MonoBehaviour:
   distance: 2
   enemyType: 0
   target: {fileID: 0}
-  walkSound: {fileID: 8300000, guid: e5255a8df6dce3b459a06acf352279ee, type: 3}
+  walkSound:
+  - {fileID: 8300000, guid: 6d86271a92902944e9361b326c9c794a, type: 3}
+  - {fileID: 8300000, guid: e5255a8df6dce3b459a06acf352279ee, type: 3}
+  - {fileID: 8300000, guid: 3cc0beae071e1fb4b9727ccadf14c0f7, type: 3}
+  - {fileID: 8300000, guid: bc899b8ac81cd164599d0d0dbb37e4fe, type: 3}
+  attackSound:
+  - {fileID: 8300000, guid: 38b02c5fa3e0a5c4a81c7f97de4e7980, type: 3}
+  - {fileID: 8300000, guid: d93e7d1fc250bf54f96dbba1fe479ef1, type: 3}
+  - {fileID: 8300000, guid: 2153aeb954dd0b8449753c6ef2914262, type: 3}
+  - {fileID: 8300000, guid: 38e604cc82955e943b2831e9127fc046, type: 3}
+  - {fileID: 8300000, guid: 9cad1cc7e0266314f9f406dd0c2ce68b, type: 3}
+  - {fileID: 8300000, guid: e6a32051be3b4e04a84e40cc106dd0bc, type: 3}
+  - {fileID: 8300000, guid: 93eb824d2ee3eee4ca4d2ea14bfeb80f, type: 3}
+  - {fileID: 8300000, guid: f5b57b2fc5151ff4a9c77e1061de000a, type: 3}
   deathSound: {fileID: 8300000, guid: 45d1cc0802e036b4baefc97e1ce2762d, type: 3}
-  attackSound: {fileID: 8300000, guid: 93eb824d2ee3eee4ca4d2ea14bfeb80f, type: 3}
   source: {fileID: 2093030037081196150}
   energyDrop: {fileID: 4139841866769911982, guid: 5c87932176be4fe439a7da0c6daaa2c2,
     type: 3}
@@ -113,7 +125,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

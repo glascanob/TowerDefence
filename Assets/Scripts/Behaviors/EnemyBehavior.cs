@@ -13,9 +13,9 @@ public class EnemyBehavior : MonoBehaviour
 
     public SpotChecker target;
 
-    public AudioClip walkSound;
+    public List<AudioClip> walkSound;
+    public List<AudioClip> attackSound;
     public AudioClip deathSound;
-    public AudioClip attackSound;
     public AudioSource source;
 
     public GameObject energyDrop;
@@ -75,17 +75,17 @@ public class EnemyBehavior : MonoBehaviour
 
             if (!attacking)
             {
-                source.clip = walkSound;
                 if (!source.isPlaying)
                 {
+                    source.clip = walkSound[Random.Range(0, walkSound.Count)];
                     source.Play();
                 }
             }
             else
             {
-                source.clip = attackSound;
                 if (!source.isPlaying)
                 {
+                    source.clip = attackSound[Random.Range(0, attackSound.Count)];
                     source.Play();
                 }
             }
