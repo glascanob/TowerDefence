@@ -133,6 +133,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
+            Debug.Log(collision.gameObject.name);
             collision.gameObject.GetComponentInParent<EnemyBehavior>().ReceiveDamage(damage, curWeapon.attackType);
         }
     }
