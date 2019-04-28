@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-    public GameState currentState = GameState.start;
+    public static GameState currentState = GameState.start;
 
     GameState previousState = GameState.start;
     public Text startText;
 
-    public GameObject StartCOntainer;
+    public GameObject startContainer;
+    public GameObject shopContainer;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,13 +35,19 @@ public class UIController : MonoBehaviour
         {
             case GameState.start:
                 startText.text = "Wave " + SpawnController.instance.wave;
+                startContainer.SetActive(true);
+                shopContainer.SetActive(false);
                 break;
             case GameState.inWave:
-
+                startContainer.SetActive(false);
+                shopContainer.SetActive(false);
                 break;
             case GameState.shop:
+                startContainer.SetActive(false);
+                shopContainer.SetActive(true);
                 break;
             case GameState.gameover:
+                SceneLoader.instance.LoadGameOverScene();
                 break;
         }
     }

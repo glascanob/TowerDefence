@@ -15,10 +15,10 @@ public class PlayerBehaviour : MonoBehaviour
     public AudioClip walkSound;
     public AudioClip attackSound;
     public AudioSource source;
-    
+
 
     [SerializeField] PlayerController pController;
-    
+
     Rigidbody2D rb2D;
 
     bool attacking = false;
@@ -40,6 +40,8 @@ public class PlayerBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (UIController.currentState == GameState.start || UIController.currentState == GameState.shop)
+            return;
         PlayerMoving();
         Attack();
         pController.SetSpell();
