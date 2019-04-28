@@ -88,7 +88,7 @@ MonoBehaviour:
   health: 8
   damage: 1
   speed: 0.5
-  distance: 2
+  distance: 8
   enemyType: 0
   target: {fileID: 0}
   walkSound:
